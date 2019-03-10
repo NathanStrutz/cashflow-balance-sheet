@@ -18,6 +18,7 @@
 | Name                  | Characteristics                                                                 |
 | --------------------- | ------------------------------------------------------------------------------- |
 | children-box          | Gray background, two inputs similar to TotalIO                                  |
+| passive-income        | Nearly full width in column, large font and input, similar to title-input       |
 | income-statement-area | Upper area of the page where it's split in left and right hemispheres           |
 | balance-sheet-area    | Lower third of the page where it's together yet split by assets and liabilities |
 

@@ -12,9 +12,9 @@ body > header {
 }
 body > header > * {
 }
-body > header label {
+.title-input label {
 	font-size: 2rem;
-	width: 40rem;
+	width: 10rem;
 	background-color: #000;
 	color: #fff;
 }
@@ -31,6 +31,15 @@ input[type="text"] {
 .title-input {
 	display: flex;
 	justify-content: stretch;
-	flex: 1 0 100%;
+	flex: 1 1 50%;
 	flex-wrap: nowrap;
 }
+
+.income-statement-area {
+	display:flex;
+	flex: 1 0 100%;
+	justify-content: space-evenly;
+}
+.left-column, .right-column {
+}
+
