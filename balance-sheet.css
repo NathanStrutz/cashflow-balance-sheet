@@ -1,0 +1,36 @@
+html {
+	font: normal 16px Georgia, Times;
+	/* font-size: 12pt; */
+	color: #000;
+	background-color: #fff;
+}
+
+body > header {
+	display: flex;
+	flex: 1 0 100%;
+	justify-content: space-evenly;
+}
+body > header > * {
+}
+body > header label {
+	font-size: 2rem;
+	width: 40rem;
+	background-color: #000;
+	color: #fff;
+}
+body > header > *:not(:last-child) {
+	padding-right: 1rem;
+}
+
+input[type="text"] {
+	border: 0;
+	border-bottom: 2px solid #000;
+	width: 100%;
+}
+
+.title-input {
+	display: flex;
+	justify-content: stretch;
+	flex: 1 0 100%;
+	flex-wrap: nowrap;
+}
