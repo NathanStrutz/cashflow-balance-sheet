@@ -120,12 +120,12 @@
       <div class="right-column">
         <section id="income-summary">
           <div id="auditor-area">
-            <div class="title-input"><label>Auditor</label><input type="text" id="player" /></div>
+            <div class="title-input"><label>Auditor</label><input type="text" id="auditor" /></div>
             <sub>Person on your right</sub>
           </div>
           <div id="passive-income-area">
-            <div class="passive-income">
-              <label>Passive Income= </label><input type="text" id="player" /> (Cash flows from Interest + Dividends + Real Estate +
+            <div class="passive-income-area">
+              <label>Passive Income= </label><input type="text" id="passive-income" /> (Cash flows from Interest + Dividends + Real Estate +
               Businesses
             </div>
           </div>
@@ -133,10 +133,28 @@
             <label>Total Income:<input type="text" id="total-income"/></label>
           </div>
         </section>
+        <section id="expense-summary">
+          <div id="children-box">
+            <div class="children-input"><label for="number-of-children">Number of Children:</label><input type="text" id="number-of-children" /></div>
+            <sub>(Begin game with 0 children)</sub>
+            <div class="children-input"><label for="per-child-expense">Per Child Expense:</label><input type="text" id="per-child-expense" /></div>
+          </div>
+          <div class="total-io">
+            <label>Total Expenses:<input type="text" id="total-expenses" /></label>
+          </div>
+        </section>
       </div>
     </section>
 
     <h2>Balance Sheet</h2>
-    <section id="balance"></section>
+    <section id="balance-sheet-area">
+      <div class="left-column">
+        <h3>Assets</h3>
+        <!-- So what is this, a table? a grid? a bunch of flexy divs? -->
+      </div>
+      <div class="right-column">
+        <h3>Liabilities</h3>
+      </div>
+    </section>
   </body>
 </html>
