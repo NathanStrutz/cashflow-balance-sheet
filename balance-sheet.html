@@ -1,139 +1,142 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<title>CashFlow 101 Balance Sheet</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" type="text/css" media="screen" href="balance-sheet.css" />
-	</head>
-	<body>
-		<header>
-			<div class="title-input"><label>Profession</label><input type="text" id="profession" /></div>
-			<div class="title-input"><label>Player</label><input type="text" id="player" /></div>
-		</header>
-		<p>
-			Goal: To get out of the Rat Race and onto the Fast Track by building up your Passive Income to be greater
-			than your Total Expenses
-		</p>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>CashFlow 101 Balance Sheet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="balance-sheet.css" />
+  </head>
+  <body>
+    <header>
+      <div class="title-input"><label>Profession</label><input type="text" id="profession" /></div>
+      <div class="title-input"><label>Player</label><input type="text" id="player" /></div>
+    </header>
+    <p>
+      Goal: To get out of the Rat Race and onto the Fast Track by building up your Passive Income to be greater than your Total Expenses
+    </p>
 
-		<h2>Income Statement</h2>
-		<section id="income-statement-area">
-			<div class="left-column">
-				<h3 class="column-title-bar">Income</h3>
-				<table>
-					<thead>
-						<tr class="column-header">
-							<th>Description</th>
-							<th>Cash Flow</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class="line-input">
-							<td>Salary:<input type="text" id="salary" /></td>
-							<td><input type="text" class="income" /></td>
-						</tr>
-						<tr class="line-input">
-							<td>Interest:<input type="text" id="interest" /></td>
-							<td><input type="text" class="income" /></td>
-						</tr>
-						<tr class="line-input">
-							<td>Dividends:<input type="text" id="dividends" /></td>
-							<td><input type="text" class="income" /></td>
-						</tr>
-						<tr class="blank-line-input">
-							<td><input type="text" id="salary" /></td>
-							<td><input type="text" class="income" /></td>
-						</tr>
-						<tr class="line-input real-estate">
-							<td>Real Estate:<input type="text" /></td>
-							<td><input type="text" class="income" /></td>
-						</tr>
-						<tr class="blank-line-input real-estate">
-							<td><input type="text" /></td>
-							<td><input type="text" class="income" /></td>
-						</tr>
-						<tr class="blank-line-input real-estate">
-							<td><input type="text" /></td>
-							<td><input type="text" class="income" /></td>
-						</tr>
-						<tr class="blank-line-input real-estate">
-							<td><input type="text" /></td>
-							<td><input type="text" class="income" /></td>
-						</tr>
-						<tr class="blank-line-input real-estate">
-							<td>Businesses:<input type="text" /></td>
-							<td><input type="text" class="income" /></td>
-						</tr>
-						<tr class="blank-line-input real-estate">
-							<td><input type="text" /></td>
-							<td><input type="text" class="income" /></td>
-						</tr>
-					</tbody>
-				</table>
+    <h2>Income Statement</h2>
+    <section id="income-statement-area">
+      <div class="left-column">
+        <h3 class="column-title-bar">Income</h3>
+        <table>
+          <thead>
+            <tr class="column-header">
+              <th>Description</th>
+              <th>Cash Flow</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="line-input">
+              <td>Salary:<input type="text" id="salary" /></td>
+              <td><input type="text" class="income" /></td>
+            </tr>
+            <tr class="line-input">
+              <td>Interest:<input type="text" id="interest" /></td>
+              <td><input type="text" class="income" /></td>
+            </tr>
+            <tr class="line-input">
+              <td>Dividends:<input type="text" id="dividends" /></td>
+              <td><input type="text" class="income" /></td>
+            </tr>
+            <tr class="blank-line-input">
+              <td><input type="text" id="salary" /></td>
+              <td><input type="text" class="income" /></td>
+            </tr>
+            <tr class="line-input real-estate">
+              <td>Real Estate:<input type="text" /></td>
+              <td><input type="text" class="income" /></td>
+            </tr>
+            <tr class="blank-line-input real-estate">
+              <td><input type="text" /></td>
+              <td><input type="text" class="income" /></td>
+            </tr>
+            <tr class="blank-line-input real-estate">
+              <td><input type="text" /></td>
+              <td><input type="text" class="income" /></td>
+            </tr>
+            <tr class="blank-line-input real-estate">
+              <td><input type="text" /></td>
+              <td><input type="text" class="income" /></td>
+            </tr>
+            <tr class="blank-line-input real-estate">
+              <td>Businesses:<input type="text" /></td>
+              <td><input type="text" class="income" /></td>
+            </tr>
+            <tr class="blank-line-input real-estate">
+              <td><input type="text" /></td>
+              <td><input type="text" class="income" /></td>
+            </tr>
+          </tbody>
+        </table>
 
-				<h3 class="column-title-bar">Expenses</h3>
-				<table>
-					<tbody>
-						<tr class="line-input">
-							<td>Taxes:<input type="text" id="salary" /></td>
-							<td><input type="text" class="expense" /></td>
-						</tr>
-						<tr class="line-input">
-							<td>Home Morggage:<input type="text" id="interest" /></td>
-							<td><input type="text" class="expense" /></td>
-						</tr>
-						<tr class="line-input">
-							<td>School Loan Payment:<input type="text" id="dividends" /></td>
-							<td><input type="text" class="expense" /></td>
-						</tr>
-						<tr class="line-input">
-							<td>Car Payment<input type="text" id="salary" /></td>
-							<td><input type="text" class="expense" /></td>
-						</tr>
-						<tr class="line-input">
-							<td>Credit Card Payment:<input type="text" /></td>
-							<td><input type="text" class="expense" /></td>
-						</tr>
-						<tr class="line-input">
-							<td>Retail Payment:<input type="text" /></td>
-							<td><input type="text" class="expense" /></td>
-						</tr>
-						<tr class="line-input">
-							<td>Other Expenses:<input type="text" /></td>
-							<td><input type="text" class="expense" /></td>
-						</tr>
-						<tr class="line-input">
-							<td>Child Expenses:<input type="text" /></td>
-							<td><input type="text" class="expense" id="child-expenses" /></td>
-						</tr>
-						<tr class="blank-line-input">
-							<td>Bank Loan Payment:<input type="text" /></td>
-							<td><input type="text" class="expense" /></td>
-						</tr>
-						<tr class="blank-line-input">
-							<td><input type="text" /></td>
-							<td><input type="text" class="expense" /></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="right-column">
-				<div id="auditor-area">
-					<div class="title-input"><label>Auditor</label><input type="text" id="player" /></div>
-					<sub>Person on your right</sub>
-				</div>
-				<div id="passive-income-area">
-					<div class="passive-income"><label>Passive Income= </label><input type="text" id="player" />
-					(Cash flows from Interest + Dividends + Real Estate + Businesses</div>
-				</div>
-				<div id="total-io">
-					<label>Total Income:<input type="text" id="total-income"/></label>
-				</div>
-			</div>
-		</section>
+        <h3 class="column-title-bar">Expenses</h3>
+        <table>
+          <tbody>
+            <tr class="line-input">
+              <td>Taxes:<input type="text" id="salary" /></td>
+              <td><input type="text" class="expense" /></td>
+            </tr>
+            <tr class="line-input">
+              <td>Home Morggage:<input type="text" id="interest" /></td>
+              <td><input type="text" class="expense" /></td>
+            </tr>
+            <tr class="line-input">
+              <td>School Loan Payment:<input type="text" id="dividends" /></td>
+              <td><input type="text" class="expense" /></td>
+            </tr>
+            <tr class="line-input">
+              <td>Car Payment<input type="text" id="salary" /></td>
+              <td><input type="text" class="expense" /></td>
+            </tr>
+            <tr class="line-input">
+              <td>Credit Card Payment:<input type="text" /></td>
+              <td><input type="text" class="expense" /></td>
+            </tr>
+            <tr class="line-input">
+              <td>Retail Payment:<input type="text" /></td>
+              <td><input type="text" class="expense" /></td>
+            </tr>
+            <tr class="line-input">
+              <td>Other Expenses:<input type="text" /></td>
+              <td><input type="text" class="expense" /></td>
+            </tr>
+            <tr class="line-input">
+              <td>Child Expenses:<input type="text" /></td>
+              <td><input type="text" class="expense" id="child-expenses" /></td>
+            </tr>
+            <tr class="blank-line-input">
+              <td>Bank Loan Payment:<input type="text" /></td>
+              <td><input type="text" class="expense" /></td>
+            </tr>
+            <tr class="blank-line-input">
+              <td><input type="text" /></td>
+              <td><input type="text" class="expense" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="right-column">
+        <section id="income-summary">
+          <div id="auditor-area">
+            <div class="title-input"><label>Auditor</label><input type="text" id="player" /></div>
+            <sub>Person on your right</sub>
+          </div>
+          <div id="passive-income-area">
+            <div class="passive-income">
+              <label>Passive Income= </label><input type="text" id="player" /> (Cash flows from Interest + Dividends + Real Estate +
+              Businesses
+            </div>
+          </div>
+          <div id="total-io">
+            <label>Total Income:<input type="text" id="total-income"/></label>
+          </div>
+        </section>
+      </div>
+    </section>
 
-		<h2>Balance Sheet</h2>
-		<section id="balance"></section>
-	</body>
+    <h2>Balance Sheet</h2>
+    <section id="balance"></section>
+  </body>
 </html>
