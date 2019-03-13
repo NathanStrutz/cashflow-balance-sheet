@@ -10,8 +10,6 @@ body > header {
   flex: 1 0 100%;
   justify-content: space-evenly;
 }
-body > header > * {
-}
 .title-input label {
   font-size: 2rem;
   width: 10rem;
@@ -24,8 +22,16 @@ body > header > *:not(:last-child) {
 
 input[type="text"] {
   border: 0;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #777;
+  border-left: 1px solid #ccc;
   width: 100%;
+  min-width: 5px;
+  padding: 4px 10px 6px 10px;
+}
+input[type="text"]:hover,
+input[type="text"]:active {
+  border-bottom-color: #000;
+  border-left-color: #888;
 }
 
 .title-input {
@@ -35,11 +41,71 @@ input[type="text"] {
   flex-wrap: nowrap;
 }
 
-.income-statement-area {
-  display: flex;
-  flex: 1 0 100%;
-  justify-content: space-evenly;
+/* Thanks grid.layoutit.com?id=D1i1b4l */
+#cashflow-statement-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "income income-summary" "expenses expense-summary";
 }
-.left-column,
-.right-column {
+#income {
+  grid-area: income;
+}
+#income-summary {
+  grid-area: income-summary;
+}
+#expenses {
+  grid-area: expenses;
+}
+#expense-summary {
+  grid-area: expense-summary;
+}
+/* 2nd grid for the bottom */
+#balance-sheet-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "assets liabilities";
+}
+#assets {
+  grid-area: assets;
+}
+#liabilities {
+  grid-area: liabilities;
+}
+
+.value-inputs,
+#asset-list,
+#liability-list {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* align-items: auto; */
+}
+
+.value-inputs > *,
+#asset-list > *,
+#liability-list > * {
+  /* In relation to its parent */
+  flex: 1 1 auto;
+  margin: 10px;
+  /* in relation to its children */
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.value-inputs > * > *,
+#asset-list > * > *,
+#liability-list > * > * {
+  flex: 1 1 auto;
+  white-space: nowrap;
+}
+
+table {
+  flex: 1 1 100%;
+}
+tr.line-input > td:first-child {
+  display: flex;
+  flex-direction: row;
 }

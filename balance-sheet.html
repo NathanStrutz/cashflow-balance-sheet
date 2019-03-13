@@ -17,10 +17,10 @@
     </p>
 
     <h2>Income Statement</h2>
-    <section id="income-statement-area">
-      <div class="left-column">
+    <section id="cashflow-statement-area">
+      <div class="income">
         <h3 class="column-title-bar">Income</h3>
-        <table>
+        <table class="line-inputs">
           <thead>
             <tr class="column-header">
               <th>Description</th>
@@ -70,90 +70,133 @@
             </tr>
           </tbody>
         </table>
+      </div>
+      <div id="income-summary">
+        <div id="auditor-area">
+          <div class="title-input"><label>Auditor</label><input type="text" id="auditor" /></div>
+          <sub>Person on your right</sub>
+        </div>
+        <div id="passive-income-area">
+          <div class="passive-income-area">
+            <label>Passive Income= </label><input type="text" id="passive-income" /> (Cash flows from Interest + Dividends + Real Estate +
+            Businesses
+          </div>
+        </div>
+        <div id="total-io">
+          <label>Total Income:<input type="text" id="total-income"/></label>
+        </div>
+      </div>
 
+      <div class="expenses">
         <h3 class="column-title-bar">Expenses</h3>
-        <table>
+        <table class="line-inputs">
           <tbody>
-            <tr class="line-input">
+            <tr>
               <td>Taxes:<input type="text" id="salary" /></td>
               <td><input type="text" class="expense" /></td>
             </tr>
-            <tr class="line-input">
-              <td>Home Morggage:<input type="text" id="interest" /></td>
+            <tr>
+              <td>Home Mortgage:<input type="text" id="interest" /></td>
               <td><input type="text" class="expense" /></td>
             </tr>
-            <tr class="line-input">
+            <tr>
               <td>School Loan Payment:<input type="text" id="dividends" /></td>
               <td><input type="text" class="expense" /></td>
             </tr>
-            <tr class="line-input">
+            <tr>
               <td>Car Payment<input type="text" id="salary" /></td>
               <td><input type="text" class="expense" /></td>
             </tr>
-            <tr class="line-input">
+            <tr>
               <td>Credit Card Payment:<input type="text" /></td>
               <td><input type="text" class="expense" /></td>
             </tr>
-            <tr class="line-input">
+            <tr>
               <td>Retail Payment:<input type="text" /></td>
               <td><input type="text" class="expense" /></td>
             </tr>
-            <tr class="line-input">
+            <tr>
               <td>Other Expenses:<input type="text" /></td>
               <td><input type="text" class="expense" /></td>
             </tr>
-            <tr class="line-input">
+            <tr>
               <td>Child Expenses:<input type="text" /></td>
               <td><input type="text" class="expense" id="child-expenses" /></td>
             </tr>
-            <tr class="blank-line-input">
+            <tr>
               <td>Bank Loan Payment:<input type="text" /></td>
               <td><input type="text" class="expense" /></td>
             </tr>
-            <tr class="blank-line-input">
+            <tr>
               <td><input type="text" /></td>
               <td><input type="text" class="expense" /></td>
             </tr>
           </tbody>
         </table>
       </div>
-      <div class="right-column">
-        <section id="income-summary">
-          <div id="auditor-area">
-            <div class="title-input"><label>Auditor</label><input type="text" id="auditor" /></div>
-            <sub>Person on your right</sub>
+      <div id="expense-summary">
+        <div id="children-box">
+          <div class="children-input">
+            <label for="number-of-children">Number of Children:</label><input type="text" id="number-of-children" />
           </div>
-          <div id="passive-income-area">
-            <div class="passive-income-area">
-              <label>Passive Income= </label><input type="text" id="passive-income" /> (Cash flows from Interest + Dividends + Real Estate +
-              Businesses
-            </div>
+          <sub>(Begin game with 0 children)</sub>
+          <div class="children-input">
+            <label for="per-child-expense">Per Child Expense:</label><input type="text" id="per-child-expense" />
           </div>
-          <div id="total-io">
-            <label>Total Income:<input type="text" id="total-income"/></label>
-          </div>
-        </section>
-        <section id="expense-summary">
-          <div id="children-box">
-            <div class="children-input"><label for="number-of-children">Number of Children:</label><input type="text" id="number-of-children" /></div>
-            <sub>(Begin game with 0 children)</sub>
-            <div class="children-input"><label for="per-child-expense">Per Child Expense:</label><input type="text" id="per-child-expense" /></div>
-          </div>
-          <div class="total-io">
-            <label>Total Expenses:<input type="text" id="total-expenses" /></label>
-          </div>
-        </section>
+        </div>
+        <div class="total-io">
+          <label>Total Expenses:<input type="text" id="total-expenses"/></label>
+        </div>
       </div>
     </section>
 
     <h2>Balance Sheet</h2>
     <section id="balance-sheet-area">
-      <div class="left-column">
+      <div id="assets">
         <h3>Assets</h3>
-        <!-- So what is this, a table? a grid? a bunch of flexy divs? -->
+        <div id="asset-list">
+          <div class="line-input">Savings: <input type="text" id="savings" /></div>
+          <div class="line-input">
+            <div>Stocks/Mutual's/CDs</div>
+            <div>No. of Shares:</div>
+            <div>Cost/Share:</div>
+          </div>
+          <div class="line-input"><input type="text" /><input type="text" /><input type="text" /></div>
+          <div class="line-input"><input type="text" /><input type="text" /><input type="text" /></div>
+          <div class="line-input">
+            <div>Real Estate:</div>
+            <div>Down Pay:</div>
+            <div>Cost:</div>
+          </div>
+          <div class="line-input"><input type="text" /><input type="text" /><input type="text" /></div>
+          <div class="line-input"><input type="text" /><input type="text" /><input type="text" /></div>
+          <div class="line-input"><input type="text" /><input type="text" /><input type="text" /></div>
+          <div class="line-input"><input type="text" /><input type="text" /><input type="text" /></div>
+          <div class="line-input">
+            <div>Business:</div>
+            <div>Down Pay:</div>
+            <div>Cost:</div>
+          </div>
+          <div class="line-input"><input type="text" /><input type="text" /><input type="text" /></div>
+          <div class="line-input"><input type="text" /><input type="text" /><input type="text" /></div>
+        </div>
       </div>
-      <div class="right-column">
+      <div id="liabilities">
         <h3>Liabilities</h3>
+        <div id="liability-list">
+          <div class="line-input"><label>Home Mortgage:</label> <input type="text" /></div>
+          <div class="line-input"><label>School Loans:</label> <input type="text" /></div>
+          <div class="line-input"><label>Car Loans:</label> <input type="text" /></div>
+          <div class="line-input"><label>Credit Cards:</label> <input type="text" /></div>
+          <div class="line-input"><label>Retail Debt:</label> <input type="text" /></div>
+          <div class="line-input"><label>RE Mortgage:</label> <input type="text" /></div>
+          <div class="line-input"><input type="text" /><input type="text" /></div>
+          <div class="line-input"><input type="text" /><input type="text" /></div>
+          <div class="line-input"><input type="text" /><input type="text" /></div>
+          <div class="line-input"><label>Liability: (Business)</label> <input type="text" /><input type="text" /></div>
+          <div class="line-input"><input type="text" /><input type="text" /></div>
+          <div class="line-input"><label>Bank Loan:</label> <input type="text" /></div>
+        </div>
       </div>
     </section>
   </body>
