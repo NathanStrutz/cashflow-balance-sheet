@@ -28,7 +28,8 @@ input[type="text"] {
   border: 0;
   border-bottom: 2px solid #777;
   border-left: 1px solid #ccc;
-  /* width: 100%; */
+  box-sizing: border-box;
+  width: 100%;
   min-width: 5px;
   padding: 4px 10px 6px 10px;
 }
@@ -53,13 +54,12 @@ h3.column-title-bar {
 }
 table.line-inputs {
   border: 2px solid #000;
+  width: 100%;
 }
 table.line-inputs td {
   padding: 0.3rem;
 }
-table.line-inputs tr td:first-of-type {
-  width: 70%;
-}
+
 table.line-inputs tr td:last-of-type {
   width: 30%;
 }
@@ -132,4 +132,5 @@ table {
 tr.line-input > td:first-child {
   display: flex;
   flex-direction: row;
+  white-space: nowrap;
 }
