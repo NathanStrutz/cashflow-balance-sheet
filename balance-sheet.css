@@ -70,18 +70,21 @@ table.line-inputs tr td:last-of-type {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "income income-summary" "expenses expense-summary";
+  grid-column-gap: 1%;
 }
 #income {
   grid-area: income;
 }
 #income-summary {
   grid-area: income-summary;
+  border-bottom: 4px solid #000;
 }
 #expenses {
   grid-area: expenses;
 }
 #expense-summary {
   grid-area: expense-summary;
+  border-bottom: 4px solid #000;
 }
 /* 2nd grid for the bottom */
 #balance-sheet-area {
