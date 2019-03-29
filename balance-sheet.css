@@ -1,6 +1,5 @@
 html {
   font: normal 16px Georgia, Times;
-  /* font-size: 12pt; */
   color: #000;
   background-color: #fff;
 }
@@ -15,16 +14,21 @@ body > header {
   width: 10rem;
   background-color: #000;
   color: #fff;
+  padding: 0.1rem 0.5rem;
 }
 body > header > *:not(:last-child) {
   padding-right: 1rem;
+}
+
+header ~ p {
+  font-size: 0.875rem;
 }
 
 input[type="text"] {
   border: 0;
   border-bottom: 2px solid #777;
   border-left: 1px solid #ccc;
-  width: 100%;
+  /* width: 100%; */
   min-width: 5px;
   padding: 4px 10px 6px 10px;
 }
@@ -39,6 +43,25 @@ input[type="text"]:active {
   justify-content: stretch;
   flex: 1 1 50%;
   flex-wrap: nowrap;
+}
+
+h3.column-title-bar {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+}
+table.line-inputs {
+  border: 2px solid #000;
+}
+table.line-inputs td {
+  padding: 0.3rem;
+}
+table.line-inputs tr td:first-of-type {
+  width: 70%;
+}
+table.line-inputs tr td:last-of-type {
+  width: 30%;
 }
 
 /* Thanks grid.layoutit.com?id=D1i1b4l */
@@ -66,6 +89,7 @@ input[type="text"]:active {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "assets liabilities";
+  border: 2px solid #000;
 }
 #assets {
   grid-area: assets;
