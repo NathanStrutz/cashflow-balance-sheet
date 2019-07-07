@@ -77,15 +77,45 @@ table.line-inputs tr td:last-of-type {
 }
 #income-summary {
   grid-area: income-summary;
-  border-bottom: 4px solid #000;
 }
 #expenses {
   grid-area: expenses;
 }
 #expense-summary {
   grid-area: expense-summary;
-  border-bottom: 4px solid #000;
 }
+#children-box {
+  background-color: #ccc;
+  border: 1px solid black;
+  margin: 1.5rem;
+  width: 65%;
+  padding: 1rem;
+}
+#children-box input {
+  background-color: #ccc;
+  border-left: 1px solid #aaa;
+}
+.children-input {
+  display: flex;
+}
+#children-box sub {
+  display: block;
+  padding: 0 0 1rem 7rem;
+}
+
+#income-summary,
+#expense-summary {
+  border-bottom: 4px solid #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.total-io {
+  display: flex;
+  font-weight: 800;
+}
+
 /* 2nd grid for the bottom */
 #balance-sheet-area {
   display: grid;
