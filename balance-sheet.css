@@ -68,7 +68,7 @@ table.line-inputs tr td:last-of-type {
 #cashflow-statement-area {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr; */
   grid-template-areas: "income income-summary" "expenses expense-summary";
   grid-column-gap: 1%;
 }
@@ -102,13 +102,21 @@ table.line-inputs tr td:last-of-type {
   display: block;
   padding: 0 0 1rem 7rem;
 }
+#children-box label {
+  font-weight: bold;
+}
 
 #income-summary,
 #expense-summary {
   border-bottom: 4px solid #000;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+#income-summary:last-child,
+#expense-summary:last-child {
+  padding-bottom: 3rem;
 }
 
 .total-io {
