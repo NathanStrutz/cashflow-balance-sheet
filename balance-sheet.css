@@ -27,11 +27,12 @@ header ~ p {
 input[type="text"] {
   border: 0;
   border-bottom: 2px solid #777;
-  border-left: 1px solid #ccc;
+  border-left: 1px dashed #ccc;
   box-sizing: border-box;
   width: 100%;
   min-width: 5px;
   padding: 4px 10px 6px 10px;
+  margin: 0 0 0 5px;
 }
 input[type="text"]:hover,
 input[type="text"]:active {
@@ -93,7 +94,8 @@ table.line-inputs tr td:last-of-type {
 }
 #children-box input {
   background-color: #ccc;
-  border-left: 1px solid #aaa;
+  border-left-color: #aaa;
+  /* border-left: 1px dashed #aaa; */
 }
 .children-input {
   display: flex;
