@@ -12,7 +12,7 @@
 | linked-column-title-bar | ColumnTitleBar but links across to form a 100vw table/grid                                           |
 | column-table-title      | Title text above a column table - "Income Statement" and "Balance Sheet"                             |
 | children-input          | Similar to total-io but lighter font, made for inputs in the children-box                            |
-| total-io                | Income/Outgo total area, Total\nIn-Out, large text, includes monthly cash flow                       |
+| total-io                | Income/Outgo total area, Total In-Out, large text, includes monthly cash flow                        |
 
 #### Unique
 
