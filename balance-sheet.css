@@ -202,3 +202,9 @@ table.line-inputs tr.blank-line-input input {
 table {
   flex: 1 1 100%;
 }
+
+input.numeric,
+input.income,
+input.expense {
+  text-align: right;
+}
