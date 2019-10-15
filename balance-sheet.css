@@ -64,6 +64,18 @@ table.line-inputs td {
 table.line-inputs tr td:last-of-type {
   width: 30%;
 }
+table.line-inputs tr.line-input > td:first-child {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+}
+table.line-inputs tr.line-input > td:first-child > label {
+  min-width: 160px;
+  max-width: 40%;
+}
+table.line-inputs tr.blank-line-input input {
+  margin-left: 0;
+}
 
 /* Thanks grid.layoutit.com?id=D1i1b4l */
 #cashflow-statement-area {
@@ -182,9 +194,4 @@ table.line-inputs tr td:last-of-type {
 
 table {
   flex: 1 1 100%;
-}
-tr.line-input > td:first-child {
-  display: flex;
-  flex-direction: row;
-  white-space: nowrap;
 }
