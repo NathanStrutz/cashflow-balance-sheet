@@ -101,23 +101,26 @@ table.line-inputs tr.blank-line-input input {
 #children-box {
   background-color: #ccc;
   border: 1px solid black;
-  margin: 1.5rem;
+  margin: 24px;
+  min-width: 300px;
   width: 65%;
-  padding: 1rem;
+  max-width: 560px;
+  padding: 16px;
 }
 #children-box input {
   background-color: #ccc;
   border-left-color: #aaa;
+}
+#children-box label {
+  font-weight: bold;
+  width: 150px;
 }
 .children-input {
   display: flex;
 }
 #children-box sub {
   display: block;
-  padding: 0 0 1rem 7rem;
-}
-#children-box label {
-  font-weight: bold;
+  padding: 0 0 16px 116px;
 }
 
 #income-summary,
@@ -190,6 +193,10 @@ table.line-inputs tr.blank-line-input input {
 #liability-list > * > * {
   flex: 1 1 auto;
   white-space: nowrap;
+}
+
+#liability-list .line-input label {
+  min-width: 150px;
 }
 
 table {
