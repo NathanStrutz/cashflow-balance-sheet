@@ -186,7 +186,25 @@ table.line-inputs tr.blank-line-input td:first-child input {
 }
 
 #monthly-cash-flow-area {
-  float: right;
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0 15px 50%;
+}
+
+.total-io {
+  padding-left: 40%;
+  display: flex;
+}
+.total-io label {
+  flex: 0 0 110px;
+}
+#monthly-cash-flow-area .total-io input {
+  flex: 1 0 110px;
+}
+
+#balance-sheet-title {
+  position: absolute;
+  margin-top: -45px;
 }
 
 /* 2nd grid for the bottom */
