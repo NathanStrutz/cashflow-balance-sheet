@@ -9,13 +9,6 @@ body > header {
   flex: 1 0 100%;
   justify-content: space-evenly;
 }
-.title-input label {
-  font-size: 2rem;
-  width: 10rem;
-  background-color: #000;
-  color: #fff;
-  padding: 0.1rem 0.5rem;
-}
 #income-summary,
 #expense-summary,
 .total-io {
@@ -23,9 +16,6 @@ body > header {
 }
 .column-header th {
   border-bottom: 2px solid #000;
-}
-.title-input {
-  font-family: Georgia, Times, serif;
 }
 #auditor-area sub {
   display: block;
@@ -56,10 +46,21 @@ input[type="text"]:active {
 }
 
 .title-input {
+  font-family: Georgia, Times, serif;
   display: flex;
   justify-content: stretch;
   flex: 1 1 50%;
   flex-wrap: nowrap;
+}
+.title-input label {
+  font-size: 2rem;
+  width: 10rem;
+  background-color: #000;
+  color: #fff;
+  padding: 0.1rem 0.5rem;
+}
+.title-input input {
+  font-size: 1.5rem;
 }
 
 h3.column-title-bar {
@@ -96,7 +97,20 @@ table.line-inputs tr.blank-line-input td:first-child input {
   font-family: sans-serif;
 }
 .line-input.all-text {
+  font-size: 0.9rem;
   border-bottom: 2px solid #000;
+}
+
+input {
+  font-size: 0.9rem;
+}
+#passive-income,
+#total-income,
+#total-expenses {
+  font-size: 1rem;
+}
+#monthly-cash-flow {
+  font-size: 1.2rem;
 }
 
 /* Thanks grid.layoutit.com?id=D1i1b4l */
