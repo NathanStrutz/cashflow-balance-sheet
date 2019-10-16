@@ -95,13 +95,13 @@ table.line-inputs tr.blank-line-input td:first-child input {
   grid-area: expenses;
 }
 #expense-summary {
-  justify-content: space-around;
+  justify-content: space-between;
   grid-area: expense-summary;
 }
 #children-box {
   background-color: #ccc;
   border: 1px solid black;
-  margin: 24px;
+  margin: 40px 24px 24px;
   min-width: 300px;
   width: 65%;
   max-width: 560px;
@@ -130,11 +130,6 @@ table.line-inputs tr.blank-line-input td:first-child input {
   flex-direction: column;
 }
 
-#income-summary:last-child,
-#expense-summary:last-child {
-  padding-bottom: 3rem;
-}
-
 .total-io {
   display: flex;
   font-weight: 800;
@@ -146,7 +141,7 @@ table.line-inputs tr.blank-line-input td:first-child input {
 }
 #expense-summary .total-io,
 #income-summary .total-io {
-  padding: 0 0 0 40%;
+  padding: 0 0 30px 40%;
 }
 
 #monthly-cash-flow-area {
