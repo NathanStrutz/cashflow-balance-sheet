@@ -73,7 +73,7 @@ table.line-inputs tr.line-input > td:first-child > label {
   min-width: 160px;
   max-width: 40%;
 }
-table.line-inputs tr.blank-line-input input {
+table.line-inputs tr.blank-line-input td:first-child input {
   margin-left: 0;
 }
 
