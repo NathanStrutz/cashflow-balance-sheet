@@ -1,5 +1,5 @@
 html {
-  font: normal 16px Georgia, Times;
+  font: normal 16px Georgia, Times, serif;
   color: #000;
   background-color: #fff;
 }
@@ -15,6 +15,18 @@ body > header {
   background-color: #000;
   color: #fff;
   padding: 0.1rem 0.5rem;
+}
+#income-summary,
+#expense-summary,
+.total-io {
+  font-family: sans-serif;
+}
+.title-input {
+  font-family: Georgia, Times, serif;
+}
+#auditor-area sub {
+  display: block;
+  text-align: center;
 }
 body > header > *:not(:last-child) {
   padding-right: 1rem;
@@ -52,6 +64,7 @@ h3.column-title-bar {
   color: #fff;
   text-align: center;
   margin: 0;
+  padding: 3px;
 }
 table.line-inputs {
   border: 2px solid #000;
@@ -75,6 +88,9 @@ table.line-inputs tr.line-input > td:first-child > label {
 }
 table.line-inputs tr.blank-line-input td:first-child input {
   margin-left: 0;
+}
+.line-input {
+  font-family: sans-serif;
 }
 
 /* Thanks grid.layoutit.com?id=D1i1b4l */
@@ -102,10 +118,11 @@ table.line-inputs tr.blank-line-input td:first-child input {
   background-color: #ccc;
   border: 1px solid black;
   margin: 40px 24px 24px;
-  min-width: 300px;
+  min-width: 200px;
   width: 65%;
   max-width: 560px;
   padding: 16px;
+  white-space: nowrap;
 }
 #children-box input {
   background-color: #ccc;
@@ -118,9 +135,11 @@ table.line-inputs tr.blank-line-input td:first-child input {
 .children-input {
   display: flex;
 }
+.children-input ~ .children-input {
+  margin-top: 15px;
+}
 #children-box sub {
   display: block;
-  padding: 0 0 16px 116px;
 }
 
 #income-summary,
