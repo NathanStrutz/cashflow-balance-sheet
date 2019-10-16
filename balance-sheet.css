@@ -92,6 +92,9 @@ table.line-inputs tr.blank-line-input td:first-child input {
 .line-input {
   font-family: sans-serif;
 }
+.line-input.all-text {
+  border-bottom: 2px solid #000;
+}
 
 /* Thanks grid.layoutit.com?id=D1i1b4l */
 #cashflow-statement-area {
@@ -107,6 +110,22 @@ table.line-inputs tr.blank-line-input td:first-child input {
   justify-content: space-between;
   grid-area: income-summary;
 }
+
+#passive-income-area .passive-income-area {
+  /* the #area is the upper section, the .area is two horizontal neighbors */
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 100px;
+  align-content: stretch;
+}
+#passive-income-area .passive-income-area label {
+  flex: 0 0 132px;
+  white-space: nowrap;
+}
+#passive-income-area .passive-income-area input {
+  flex: 1 1 auto;
+}
+
 #expenses {
   grid-area: expenses;
 }
