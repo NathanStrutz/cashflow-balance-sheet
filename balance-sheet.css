@@ -86,7 +86,7 @@ table.line-inputs tr.line-input > td:first-child {
   white-space: nowrap;
 }
 table.line-inputs tr.line-input > td:first-child > label {
-  min-width: 160px;
+  min-width: 150px;
   max-width: 40%;
 }
 table.line-inputs tr.blank-line-input td:first-child input {
@@ -223,8 +223,7 @@ table.line-inputs tr.blank-line-input td:first-child input {
 }
 
 .value-inputs,
-#asset-list,
-#liability-list {
+#asset-list {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -232,25 +231,22 @@ table.line-inputs tr.blank-line-input td:first-child input {
 }
 
 .value-inputs > *,
-#asset-list > *,
-#liability-list > * {
+#asset-list > * {
   /* In relation to its parent */
   flex: 1 1 auto;
-  margin: 10px;
+  margin: 7px;
   /* in relation to its children */
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
 }
 .value-inputs > * > *,
-#asset-list > * > *,
-#liability-list > * > * {
+#asset-list > * > * {
   flex: 1 1 auto;
   white-space: nowrap;
 }
-
-#liability-list .line-input label {
-  min-width: 150px;
+.line-input label {
+  font-size: 0.9rem;
 }
 
 table {
@@ -261,4 +257,11 @@ input.numeric,
 input.income,
 input.expense {
   text-align: right;
+}
+
+table#liability-list {
+  border: 0;
+}
+table#liability-list tbody tr td:first-child {
+  width: 130px;
 }

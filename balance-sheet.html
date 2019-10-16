@@ -167,7 +167,7 @@
       <div id="assets">
         <h3 class="column-title-bar">Assets</h3>
         <div id="asset-list">
-          <div class="line-input">Savings: <input type="text" id="savings" class="numeric" /></div>
+          <div class="line-input"><label for="savings">Savings:</label> <input type="text" id="savings" class="numeric" /></div>
           <div class="line-input all-text">
             <div>Stocks/Mutual's/CDs</div>
             <div>No. of Shares:</div>
@@ -227,20 +227,59 @@
       </div>
       <div id="liabilities">
         <h3 class="column-title-bar">Liabilities</h3>
-        <div id="liability-list">
-          <div class="line-input"><label>Home Mortgage:</label> <input type="text" class="numeric" /></div>
-          <div class="line-input"><label>School Loans:</label> <input type="text" class="numeric" /></div>
-          <div class="line-input"><label>Car Loans:</label> <input type="text" class="numeric" /></div>
-          <div class="line-input"><label>Credit Cards:</label> <input type="text" class="numeric" /></div>
-          <div class="line-input"><label>Retail Debt:</label> <input type="text" class="numeric" /></div>
-          <div class="line-input"><label>RE Mortgage:</label> <input type="text" class="numeric" /></div>
-          <div class="line-input"><input type="text" /><input type="text" class="numeric" /></div>
-          <div class="line-input"><input type="text" /><input type="text" class="numeric" /></div>
-          <div class="line-input"><input type="text" /><input type="text" class="numeric" /></div>
-          <div class="line-input"><label>Liability: (Business)</label> <input type="text" /><input type="text" class="numeric" /></div>
-          <div class="line-input"><input type="text" /><input type="text" class="numeric" /></div>
-          <div class="line-input"><label>Bank Loan:</label> <input type="text" class="numeric" /></div>
-        </div>
+        <table id="liability-list" class="line-inputs">
+          <tbody>
+            <tr>
+              <td class="line-input"><label>Home Mortgage:</label></td>
+              <td colspan="2"><input type="text" class="numeric" /></td>
+            </tr>
+            <tr class="line-input">
+              <td><label>School Loans:</label></td>
+              <td colspan="2"><input type="text" class="numeric" /></td>
+            </tr>
+            <tr class="line-input">
+              <td><label>Car Loans:</label></td>
+              <td colspan="2"><input type="text" class="numeric" /></td>
+            </tr>
+            <tr class="line-input">
+              <td><label>Credit Cards:</label></td>
+              <td colspan="2"><input type="text" class="numeric" /></td>
+            </tr>
+            <tr class="line-input">
+              <td><label>Retail Debt:</label></td>
+              <td colspan="2"><input type="text" class="numeric" /></td>
+            </tr>
+            <tr class="line-input">
+              <td><label>RE Mortgage:</label></td>
+              <td colspan="2"><input type="text" class="numeric" /></td>
+            </tr>
+            <tr class="blank-line-input">
+              <td colspan="2"><input type="text" class="numeric" /></td>
+              <td><input type="text" class="numeric" /></td>
+            </tr>
+            <tr class="blank-line-input">
+              <td colspan="2"><input type="text" class="numeric" /></td>
+              <td><input type="text" class="numeric" /></td>
+            </tr>
+            <tr class="blank-line-input">
+              <td colspan="2"><input type="text" class="numeric" /></td>
+              <td><input type="text" class="numeric" /></td>
+            </tr>
+            <tr class="line-input">
+              <td><label>Liability: (Business)</label></td>
+              <td><input type="text" class="numeric" /></td>
+              <td><input type="text" class="numeric" /></td>
+            </tr>
+            <tr class="blank-line-input">
+              <td colspan="2"><input type="text" class="numeric" /></td>
+              <td><input type="text" class="numeric" /></td>
+            </tr>
+            <tr class="line-input">
+              <td><label>Bank Loan:</label></td>
+              <td colspan="2"><input type="text" class="numeric" /></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
   </body>
