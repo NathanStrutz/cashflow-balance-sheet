@@ -21,6 +21,9 @@ body > header {
 .total-io {
   font-family: sans-serif;
 }
+.column-header th {
+  border-bottom: 2px solid #000;
+}
 .title-input {
   font-family: Georgia, Times, serif;
 }
