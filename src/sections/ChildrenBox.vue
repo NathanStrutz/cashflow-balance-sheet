@@ -1,0 +1,53 @@
+<template>
+  <div id="children-box">
+    <div class="children-input">
+      <label for="number-of-children">
+        Number of
+        <br />Children:
+      </label>
+      <input type="text" id="number-of-children" class="numeric" />
+    </div>
+    <sub>(Begin game with 0 children)</sub>
+    <div class="children-input">
+      <label for="per-child-expense">
+        Per Child
+        <br />Expense:
+      </label>
+      <input type="text" id="per-child-expense" class="numeric" />
+    </div>
+  </div>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style lang="scss">
+#children-box {
+	background-color: #ccc;
+	border: 1px solid black;
+	margin: 40px 24px 24px;
+	min-width: 200px;
+	width: 65%;
+	max-width: 560px;
+	padding: 16px;
+	white-space: nowrap;
+}
+#children-box input {
+	background-color: #ccc;
+	border-left-color: #aaa;
+}
+#children-box label {
+	font-weight: bold;
+	width: 150px;
+}
+.children-input {
+	display: flex;
+}
+.children-input ~ .children-input {
+	margin-top: 15px;
+}
+#children-box sub {
+	display: block;
+}
+</style>
