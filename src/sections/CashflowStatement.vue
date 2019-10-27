@@ -331,6 +331,7 @@ export default {};
 
 #income-summary,
 #expense-summary {
+	font-family: sans-serif;
 	border-bottom: 4px solid #000;
 	display: flex;
 	flex-direction: column;

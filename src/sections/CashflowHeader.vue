@@ -17,12 +17,12 @@ export default {
 </script>
 
 <style lang="scss">
-body > header {
+header {
 	display: flex;
 	flex: 1 0 100%;
 	justify-content: space-evenly;
 }
-body > header > *:not(:last-child) {
+header > *:not(:last-child) {
 	padding-right: 1rem;
 }
 

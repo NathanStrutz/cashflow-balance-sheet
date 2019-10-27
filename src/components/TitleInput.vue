@@ -1,4 +1,4 @@
-<template>
+ <template>
   <div class="title-input">
     <label>
       <slot />
@@ -15,7 +15,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .title-input {
 	font-family: Georgia, Times, serif;
 	display: flex;

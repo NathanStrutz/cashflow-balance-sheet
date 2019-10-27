@@ -23,8 +23,12 @@ export default {};
 	display: flex;
 	flex-direction: column;
 	margin: 15px 0 15px 50%;
-	.total-io input {
-		flex: 1 0 110px;
+
+	.total-io {
+		padding-left: 40%;
+		input {
+			flex: 1 0 110px;
+		}
 	}
 }
 </style>

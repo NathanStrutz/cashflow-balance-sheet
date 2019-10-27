@@ -90,12 +90,10 @@ table {
 		font-size: 0.9rem;
 	}
 }
-.line-input #income-summary,
+#income-summary,
 #expense-summary,
 .total-io {
 	font-family: sans-serif;
-	padding-left: 40%;
-	display: flex;
 }
 
 .total-io {
