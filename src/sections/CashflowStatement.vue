@@ -1,14 +1,14 @@
 <template>
-  <div>
-    <h2>Income Statement</h2>
-    <section id="cashflow-statement-area">
-      <cashflow-statement-income />
-      <cashflow-statement-income-summary />
+	<div>
+		<h2>Income Statement</h2>
+		<section id="cashflow-statement-area">
+			<cashflow-statement-income />
+			<cashflow-statement-income-summary />
 
-      <cashflow-statement-expenses />
-      <cashflow-statement-expenses-summary />
-    </section>
-  </div>
+			<cashflow-statement-expenses />
+			<cashflow-statement-expenses-summary />
+		</section>
+	</div>
 </template>
 
 <script>

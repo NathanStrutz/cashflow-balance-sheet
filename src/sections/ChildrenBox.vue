@@ -1,21 +1,21 @@
 <template>
-  <div id="children-box">
-    <div class="children-input">
-      <label for="number-of-children">
-        Number of
-        <br />Children:
-      </label>
-      <input type="text" id="number-of-children" class="numeric" />
-    </div>
-    <sub>(Begin game with 0 children)</sub>
-    <div class="children-input">
-      <label for="per-child-expense">
-        Per Child
-        <br />Expense:
-      </label>
-      <input type="text" id="per-child-expense" class="numeric" />
-    </div>
-  </div>
+	<div id="children-box">
+		<div class="children-input">
+			<label for="number-of-children">
+				Number of
+				<br />Children:
+			</label>
+			<input type="text" id="number-of-children" class="numeric" />
+		</div>
+		<sub>(Begin game with 0 children)</sub>
+		<div class="children-input">
+			<label for="per-child-expense">
+				Per Child
+				<br />Expense:
+			</label>
+			<input type="text" id="per-child-expense" class="numeric" />
+		</div>
+	</div>
 </template>
 
 <script>

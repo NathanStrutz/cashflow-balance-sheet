@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <h2 id="balance-sheet-title">Balance Sheet</h2>
-    <section id="balance-sheet-area">
-      <balance-sheet-assets />
-      <balance-sheet-liabilities />
-    </section>
-  </div>
+	<div>
+		<h2 id="balance-sheet-title">Balance Sheet</h2>
+		<section id="balance-sheet-area">
+			<balance-sheet-assets />
+			<balance-sheet-liabilities />
+		</section>
+	</div>
 </template>
 
 <script>

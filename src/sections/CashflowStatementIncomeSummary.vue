@@ -1,24 +1,24 @@
 <template>
-  <div id="income-summary">
-    <div id="auditor-area">
-      <div class="title-input">
-        <label>Auditor</label>
-        <input type="text" id="auditor" />
-      </div>
-      <sub>Person on your right</sub>
-    </div>
-    <div id="passive-income-area">
-      <div class="passive-income-area">
-        <label>Passive Income =</label>
-        <input type="text" id="passive-income" class="numeric" />
-      </div>
-      <sub>(Cash flows from Interest + Dividends + Real Estate + Businesses</sub>
-    </div>
-    <div class="total-io">
-      <label for="total-income">Total Income:</label>
-      <input type="text" id="total-income" class="numeric" />
-    </div>
-  </div>
+	<div id="income-summary">
+		<div id="auditor-area">
+			<div class="title-input">
+				<label>Auditor</label>
+				<input type="text" id="auditor" />
+			</div>
+			<sub>Person on your right</sub>
+		</div>
+		<div id="passive-income-area">
+			<div class="passive-income-area">
+				<label>Passive Income =</label>
+				<input type="text" id="passive-income" class="numeric" />
+			</div>
+			<sub>(Cash flows from Interest + Dividends + Real Estate + Businesses</sub>
+		</div>
+		<div class="total-io">
+			<label for="total-income">Total Income:</label>
+			<input type="text" id="total-income" class="numeric" />
+		</div>
+	</div>
 </template>
 
 <script>
