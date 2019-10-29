@@ -24,7 +24,6 @@
     "last 2 versions"
   ],
   "prettier": {
-    "tabWidth": 2,
     "printWidth": 140
   }
 }

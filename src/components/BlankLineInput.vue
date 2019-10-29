@@ -1,7 +1,6 @@
 <template>
 	<tr class="line-input">
 		<td>
-			<label>{{ title }}:</label>
 			<input type="text" :value="text" @input="$emit('updateText', $event.target.value)" />
 		</td>
 		<td>
@@ -13,9 +12,8 @@
 <script>
 export default {
 	props: {
-		title: String,
 		text: String,
-		value: Number
+		value: String
 	}
 };
 </script>

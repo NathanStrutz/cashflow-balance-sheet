@@ -1,6 +1,8 @@
 import Vue from "vue";
 import Vuex from "vuex";
 
+import income from "./stores/income";
+
 Vue.use(Vuex);
 
 export default new Vuex.Store({
@@ -9,11 +11,6 @@ export default new Vuex.Store({
       Profession: "",
       Player: "",
       Auditor: ""
-    },
-    income: {
-      salary: { note: "", value: 0 },
-      interest: { note: "", value: 0 },
-      dividends: [{ note: "", value: 0 }, { note: "", value: 0 }]
     },
     expenses: {
       taxes: { note: "", value: 0 },
@@ -73,11 +70,9 @@ export default new Vuex.Store({
     cashFlow: (state, getters) => getters.totalIncome - getters.totalExpenses
   },
 
-  mutations: {
-    changeSalary(state, payload) {
-      state.income.salary = { ...state.income.salary, ...payload };
-    }
-  },
+  mutations: {},
 
-  modules: {}
+  modules: {
+    income: income
+  }
 });

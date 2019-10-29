@@ -9,22 +9,8 @@
 				</tr>
 			</thead>
 			<tbody>
-				<line-input
-					title="Salary"
-					:text="income.salary.note"
-					@updateText="val => changeSalary({ note: val })"
-					:value="income.salary.value"
-					@updateValue="val => changeSalary({ value: val })"
-				/>
-				<tr class="line-input">
-					<td>
-						<label>Interest:</label>
-						<input type="text" id="interest" />
-					</td>
-					<td>
-						<input type="text" class="income" />
-					</td>
-				</tr>
+				<state-connected-input category="income" title="Salary" item="salary" change="changeSalary" />
+				<state-connected-input category="income" title="Interest" item="interest" change="changeInterest" />
 				<tr class="line-input">
 					<td>
 						<label>Dividends:</label>
@@ -98,21 +84,16 @@
 </template>
 
 <script>
-import LineInput from "@/components/LineInput.vue";
+import StateConnectedInput from "@/components/StateConnectedInput.vue";
 import BlankLineInput from "@/components/BlankLineInput.vue";
 import { mapState, mapMutations } from "vuex";
 
 export default {
 	components: {
-		LineInput,
-		BlankLineInput
+		StateConnectedInput
 	},
-	computed: {
-		...mapState(["income"])
-	},
-	methods: {
-		...mapMutations(["changeSalary"])
-	}
+	computed: {},
+	methods: {}
 };
 </script>
 
