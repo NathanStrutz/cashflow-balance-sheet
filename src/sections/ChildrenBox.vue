@@ -5,7 +5,13 @@
 				Number of
 				<br />Children:
 			</label>
-			<input type="text" id="number-of-children" class="numeric" />
+			<input
+				type="text"
+				id="number-of-children"
+				:value="children.numberOfChildren"
+				@input="changeNumberOfChildren($event.target.value)"
+				class="numeric"
+			/>
 		</div>
 		<sub>(Begin game with 0 children)</sub>
 		<div class="children-input">
@@ -13,13 +19,28 @@
 				Per Child
 				<br />Expense:
 			</label>
-			<input type="text" id="per-child-expense" class="numeric" />
+			<input
+				type="text"
+				id="per-child-expense"
+				:value="children.perChildExpense"
+				@input="changePerChildExpense($event.target.value)"
+				class="numeric"
+			/>
 		</div>
 	</div>
 </template>
 
 <script>
-export default {};
+import { mapState, mapMutations } from "vuex";
+
+export default {
+	computed: {
+		...mapState("expenses", ["children"])
+	},
+	methods: {
+		...mapMutations("expenses", ["changeNumberOfChildren", "changePerChildExpense"])
+	}
+};
 </script>
 
 <style lang="scss">
