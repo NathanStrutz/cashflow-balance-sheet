@@ -1,17 +1,23 @@
 <template>
-  <div id="monthly-cash-flow-area">
-    <div class="total-io">
-      <label for="monthly-cash-flow">
-        Monthly Cash Flow:
-        <sub>(Pay Check)</sub>
-      </label>
-      <input type="text" id="monthly-cash-flow" class="numeric" />
-    </div>
-  </div>
+	<div id="monthly-cash-flow-area">
+		<div class="total-io">
+			<label for="monthly-cash-flow">
+				Monthly Cash Flow:
+				<sub>(Pay Check)</sub>
+			</label>
+			<input type="text" id="monthly-cash-flow" :value="cashFlow" class="numeric" />
+		</div>
+	</div>
 </template>
 
 <script>
-export default {};
+import { mapGetters } from "vuex";
+
+export default {
+	computed: {
+		...mapGetters(["cashFlow"])
+	}
+};
 </script>
 
 <style lang="scss">
