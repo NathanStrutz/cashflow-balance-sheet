@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <cashflow-header />
-    <cashflow-statement />
-    <monthly-cash-flow />
-    <balance-sheet />
-  </div>
+	<div>
+		<cashflow-header />
+		<cashflow-statement />
+		<monthly-cash-flow />
+		<balance-sheet />
+	</div>
 </template>
 
 <script>

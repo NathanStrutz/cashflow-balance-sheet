@@ -1,5 +1,5 @@
 <template>
-	<tr class="line-input">
+	<tr class="blank-line-input">
 		<td>
 			<input type="text" :value="text" @input="$emit('updateText', $event.target.value)" />
 		</td>

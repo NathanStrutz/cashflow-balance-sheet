@@ -3,26 +3,32 @@
 		<div id="auditor-area">
 			<div class="title-input">
 				<label>Auditor</label>
-				<input type="text" id="auditor" />
+				<input type="text" :value="auditor" id="auditor" />
 			</div>
 			<sub>Person on your right</sub>
 		</div>
 		<div id="passive-income-area">
 			<div class="passive-income-area">
 				<label>Passive Income =</label>
-				<input type="text" id="passive-income" class="numeric" />
+				<input type="text" id="passive-income" :value="passiveIncome" class="numeric" />
 			</div>
 			<sub>(Cash flows from Interest + Dividends + Real Estate + Businesses</sub>
 		</div>
 		<div class="total-io">
 			<label for="total-income">Total Income:</label>
-			<input type="text" id="total-income" class="numeric" />
+			<input type="text" id="total-income" :value="totalIncome" class="numeric" />
 		</div>
 	</div>
 </template>
 
 <script>
-export default {};
+import { mapGetters } from "vuex";
+
+export default {
+	computed: {
+		...mapGetters(["auditor", "passiveIncome", "totalIncome"])
+	}
+};
 </script>
 
 <style lang="scss">

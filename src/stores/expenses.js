@@ -9,7 +9,7 @@ export default {
     retail: { note: "", value: 0 },
     other: { note: "", value: 0 },
     bankLoan: { note: "", value: 0 },
-    children: { numberOfChildren: 0, perChildExpense: 0 }
+    children: { note: "", numberOfChildren: 0, perChildExpense: 0 }
   },
   getters: {},
   mutations: {
