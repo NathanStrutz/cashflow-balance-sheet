@@ -2,6 +2,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 
 import income from "./stores/income";
+import expenses from "./stores/expenses";
 
 Vue.use(Vuex);
 
@@ -11,17 +12,6 @@ export default new Vuex.Store({
       Profession: "",
       Player: "",
       Auditor: ""
-    },
-    expenses: {
-      taxes: { note: "", value: 0 },
-      mortgage: { note: "", value: 0 },
-      schoolLoan: { note: "", value: 0 },
-      carLoan: { note: "", value: 0 },
-      creditCard: { note: "", value: 0 },
-      retail: { note: "", value: 0 },
-      other: { note: "", value: 0 },
-      bankLoan: { note: "", value: 0 },
-      children: { numberOfChildren: 0, perChildExpense: 0 }
     },
     assets: {
       savings: 0,
@@ -73,6 +63,7 @@ export default new Vuex.Store({
   mutations: {},
 
   modules: {
-    income: income
+    income: income,
+    expenses: expenses
   }
 });
