@@ -10,7 +10,7 @@
 				<state-connected-input title="Credit Card Payment" category="expenses" item="creditCard" change="changeCreditCard" />
 				<state-connected-input title="Retail Payment" category="expenses" item="retail" change="changeRetail" />
 				<state-connected-input title="Other Expenses" category="expenses" item="other" change="changeOther" />
-				<line-input title="Child Expenses" :value="childExpenses" />
+				<line-input title="Child Expenses" :text="childNote" @updateText="changeChildNote" :value="childExpenses" readonly />
 				<state-connected-input title="Bank Loan Payment" category="expenses" item="bankLoan" change="changeBankLoan" />
 				<tr class="blank-line-input">
 					<td>
@@ -28,7 +28,7 @@
 <script>
 import StateConnectedInput from "@/components/StateConnectedInput.vue";
 import LineInput from "@/components/LineInput.vue";
-import { mapGetters } from "vuex";
+import { mapGetters, mapMutations } from "vuex";
 
 export default {
 	components: {
@@ -36,7 +36,13 @@ export default {
 		LineInput
 	},
 	computed: {
-		...mapGetters(["childExpenses"])
+		...mapGetters(["childExpenses"]),
+		childNote() {
+			return this.$store.state.expenses.children.note;
+		}
+	},
+	methods: {
+		...mapMutations(["changeChildNote"])
 	}
 };
 </script>

@@ -37,6 +37,9 @@ export default {
     changeBankLoan(state, payload) {
       state.bankLoan = { ...state.bankLoan, ...payload };
     },
+    changeChildNote(state, payload) {
+      state.children.note = payload;
+    },
     changeNumberOfChildren(state, payload) {
       state.children.numberOfChildren = payload;
     },
