@@ -1,10 +1,7 @@
 <template>
 	<div id="income-summary">
 		<div id="auditor-area">
-			<div class="title-input">
-				<label>Auditor</label>
-				<input type="text" :value="auditor" id="auditor" />
-			</div>
+			<title-input id="auditor">Auditor</title-input>
 			<sub>Person on your right</sub>
 		</div>
 		<div id="passive-income-area">
@@ -23,8 +20,12 @@
 
 <script>
 import { mapGetters } from "vuex";
+import TitleInput from "@/components/TitleInput.vue";
 
 export default {
+	components: {
+		TitleInput
+	},
 	computed: {
 		...mapGetters(["auditor", "passiveIncome", "totalIncome"])
 	}
