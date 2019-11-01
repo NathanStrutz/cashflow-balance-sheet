@@ -10,15 +10,7 @@
 				<state-connected-input title="Credit Card Payment" category="expenses" item="creditCard" change="changeCreditCard" />
 				<state-connected-input title="Retail Payment" category="expenses" item="retail" change="changeRetail" />
 				<state-connected-input title="Other Expenses" category="expenses" item="other" change="changeOther" />
-				<tr class="line-input">
-					<td>
-						<label>Child Expenses:</label>
-						<input type="text" />
-					</td>
-					<td>
-						<input type="text" class="expense" id="child-expenses" />
-					</td>
-				</tr>
+				<line-input title="Child Expenses" :value="childExpenses" />
 				<state-connected-input title="Bank Loan Payment" category="expenses" item="bankLoan" change="changeBankLoan" />
 				<tr class="blank-line-input">
 					<td>
@@ -35,10 +27,16 @@
 
 <script>
 import StateConnectedInput from "@/components/StateConnectedInput.vue";
+import LineInput from "@/components/LineInput.vue";
+import { mapGetters } from "vuex";
 
 export default {
 	components: {
-		StateConnectedInput
+		StateConnectedInput,
+		LineInput
+	},
+	computed: {
+		...mapGetters(["childExpenses"])
 	}
 };
 </script>
