@@ -3,6 +3,7 @@ import Vuex from "vuex";
 
 import income from "./stores/income";
 import expenses from "./stores/expenses";
+import liabilities from "./stores/liabilities";
 
 Vue.use(Vuex);
 
@@ -20,14 +21,6 @@ export default new Vuex.Store({
     },
     assets: {
       savings: 0
-    },
-    liabilities: {
-      mortgage: 0,
-      schoolLoan: 0,
-      carLoan: 0,
-      creditCard: 0,
-      retail: 0,
-      bankLoan: 0
     },
     investments: {
       realEstate: [newRealEstate(), newRealEstate(), newRealEstate(), newRealEstate()],
@@ -61,7 +54,8 @@ export default new Vuex.Store({
   mutations: {},
 
   modules: {
-    income: income,
-    expenses: expenses
+    income,
+    expenses,
+    liabilities
   }
 });
