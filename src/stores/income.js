@@ -2,8 +2,7 @@ export default {
   namespaced: true,
   state: {
     salary: { note: "", value: 0 },
-    interest: { note: "", value: 0 },
-    dividends: [{ note: "", value: 0 }, { note: "", value: 0 }]
+    interest: { note: "", value: 0 }
   },
   getters: {},
   mutations: {
