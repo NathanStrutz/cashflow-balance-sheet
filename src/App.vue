@@ -66,28 +66,8 @@ table {
 	&.line-inputs tr td:last-of-type {
 		width: 30%;
 	}
-	&.line-inputs tr.line-input > td:first-child {
-		display: flex;
-		flex-direction: row;
-		white-space: nowrap;
-	}
-	&.line-inputs tr.line-input > td:first-child > label {
-		min-width: 150px;
-		max-width: 40%;
-	}
 	&.line-inputs tr.blank-line-input td:first-child input {
 		margin-left: 0;
-	}
-}
-
-.line-input {
-	font-family: sans-serif;
-	&.all-text {
-		font-size: 0.9rem;
-		border-bottom: 2px solid #000;
-	}
-	label {
-		font-size: 0.9rem;
 	}
 }
 #income-summary,
@@ -113,5 +93,11 @@ input.numeric,
 input.income,
 input.expense {
 	text-align: right;
+}
+
+input[readonly]:hover,
+input[readonly]:active,
+input[readonly]:focus {
+	background-color: rgb(255, 248, 236);
 }
 </style>

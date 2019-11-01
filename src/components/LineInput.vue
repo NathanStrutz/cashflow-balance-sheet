@@ -2,10 +2,10 @@
 	<tr class="line-input">
 		<td>
 			<label>{{ title }}:</label>
-			<input type="text" :value="text" @input="$emit('updateText', $event.target.value)" />
+			<input v-if="text" type="text" :value="text" @input="$emit('updateText', $event.target.value)" />
 		</td>
-		<td>
-			<input type="text" class="numeric" :value="value" @input="$emit('updateValue', $event.target.value)" />
+		<td :colspan="text ? 1 : 2">
+			<input type="text" class="numeric" :value="value" @input="$emit('updateValue', $event.target.value)" :readonly="readonly" />
 		</td>
 	</tr>
 </template>
@@ -15,10 +15,32 @@ export default {
 	props: {
 		title: String,
 		text: String,
-		value: Number
+		value: Number,
+		readonly: Boolean
 	}
 };
 </script>
 
 <style lang="scss">
+tr.line-input > td:first-child {
+	display: flex;
+	flex-direction: row;
+	white-space: nowrap;
+}
+
+tr.line-input > td:first-child > label {
+	min-width: 150px;
+	max-width: 40%;
+}
+
+.line-input {
+	font-family: sans-serif;
+	&.all-text {
+		font-size: 0.9rem;
+		border-bottom: 2px solid #000;
+	}
+	label {
+		font-size: 0.9rem;
+	}
+}
 </style>
