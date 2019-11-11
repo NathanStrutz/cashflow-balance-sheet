@@ -4,6 +4,8 @@ import Vuex from "vuex";
 import income from "./stores/income";
 import expenses from "./stores/expenses";
 import liabilities from "./stores/liabilities";
+import meta from "./stores/meta";
+import assets from "./stores/assets";
 
 Vue.use(Vuex);
 
@@ -14,14 +16,6 @@ const newBusiness = () => ({ name: "", downPayment: 0, cost: 0, liability: 0, in
 
 export default new Vuex.Store({
   state: {
-    meta: {
-      Profession: "",
-      Player: "",
-      Auditor: ""
-    },
-    assets: {
-      savings: 0
-    },
     investments: {
       realEstate: [newRealEstate(), newRealEstate(), newRealEstate(), newRealEstate()],
       businesses: [newBusiness(), newBusiness()],
@@ -31,22 +25,23 @@ export default new Vuex.Store({
   },
 
   getters: {
-    passiveIncome: (state, getters) =>
-      state.income.interest.value +
+    passiveIncome: (state, getters, rootState, rootGetters) =>
+      rootState.income.interest.value +
       state.investments.cds.reduce((sum, it) => sum + it.payoutPerShare * it.shares, 0) +
       state.investments.realEstate.reduce((sum, it) => sum + it.income, 0) +
       state.investments.businesses.reduce((sum, it) => sum + it.income, 0),
-    totalIncome: (state, getters) => state.income.salary.value - 0 + getters.passiveIncome,
-    childExpenses: state => state.expenses.children.numberOfChildren * state.expenses.children.perChildExpense,
-    totalExpenses: (state, getters) =>
-      state.expenses.taxes.value +
-      state.expenses.mortgage.value +
-      state.expenses.schoolLoan.value +
-      state.expenses.carLoan.value +
-      state.expenses.creditCard.value +
-      state.expenses.retail.value +
-      state.expenses.other.value +
-      state.expenses.bankLoan.value +
+    totalIncome: (state, getters, rootState, rootGetters) => rootState.income.salary.value - 0 + getters.passiveIncome,
+    childExpenses: (state, getters, rootState, rootGetters) =>
+      rootState.expenses.children.numberOfChildren * rootState.expenses.children.perChildExpense,
+    totalExpenses: (state, getters, rootState, rootGetters) =>
+      rootState.expenses.taxes.value +
+      rootState.expenses.mortgage.value +
+      rootState.expenses.schoolLoan.value +
+      rootState.expenses.carLoan.value +
+      rootState.expenses.creditCard.value +
+      rootState.expenses.retail.value +
+      rootState.expenses.other.value +
+      rootState.expenses.bankLoan.value +
       getters.childExpenses,
     cashFlow: (state, getters) => getters.totalIncome - getters.totalExpenses
   },
@@ -56,6 +51,8 @@ export default new Vuex.Store({
   modules: {
     income,
     expenses,
-    liabilities
+    liabilities,
+    meta,
+    assets
   }
 });
