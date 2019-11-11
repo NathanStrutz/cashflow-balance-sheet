@@ -5,7 +5,14 @@
 			<input v-if="hasText" type="text" :value="text" @input="$emit('updateText', $event.target.value)" />
 		</td>
 		<td :colspan="hasText ? 1 : 2">
-			<input type="text" class="numeric" :value="value" @input="$emit('updateValue', $event.target.value)" :readonly="readonly" />
+			<input
+				type="text"
+				class="numeric"
+				:value="value"
+				@input="$emit('updateValue', $event.target.value)"
+				:readonly="readonly"
+				@keypress="numbersOnly"
+			/>
 		</td>
 	</tr>
 </template>
@@ -18,6 +25,13 @@ export default {
 		value: Number,
 		readonly: Boolean,
 		hasText: { type: Boolean, default: true }
+	},
+	methods: {
+		numbersOnly(e) {
+			// make sure only numbers come through
+			return Number.isInteger(Number(e.key)) ? true : e.preventDefault();
+			// easy formatting because the game doesn't have change.
+		}
 	}
 };
 </script>

@@ -21,12 +21,14 @@ export default {
 		title: String,
 		category: String,
 		item: String,
-		change: String
+		change: String // State change method for the item
 	},
 	computed: {
+		/** the node for this category/item */
 		data() {
 			return this.$store.state[this.category][this.item];
 		},
+		/** If this data element has anything for the note */
 		hasText() {
 			return !(this.data.note === undefined);
 		}
@@ -36,9 +38,7 @@ export default {
 			this.$store.commit(this.category + "/" + this.change, { note: e });
 		},
 		changeValue(e) {
-			if (Number(e)) {
-				this.$store.commit(this.category + "/" + this.change, { value: Number(e) });
-			}
+			this.$store.commit(this.category + "/" + this.change, { value: Number(e) });
 		}
 	}
 };
