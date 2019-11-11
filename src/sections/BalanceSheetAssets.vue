@@ -4,7 +4,7 @@
 		<div id="asset-list">
 			<div class="line-input">
 				<label for="savings">Savings:</label>
-				<input type="text" id="savings" class="numeric" />
+				<input type="text" id="savings" class="numeric" :value="savings" @input="changeSavings($event.target.value)" />
 			</div>
 			<div class="line-input all-text">
 				<div>Stocks/Mutual's/CDs</div>
@@ -66,7 +66,16 @@
 </template>
 
 <script>
-export default {};
+import { mapState, mapMutations } from "vuex";
+
+export default {
+	computed: {
+		...mapState("assets", ["savings"])
+	},
+	methods: {
+		...mapMutations("assets", ["changeSavings"])
+	}
+};
 </script>
 
 <style lang="scss">
