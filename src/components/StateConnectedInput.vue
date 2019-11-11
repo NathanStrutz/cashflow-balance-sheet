@@ -1,5 +1,12 @@
 <template>
-	<line-input :title="title" :text="data.note" :value="data.value" @updateText="changeText" @updateValue="changeValue" />
+	<line-input
+		:title="title"
+		:text="data.note"
+		:value="data.value"
+		@updateText="changeText"
+		@updateValue="changeValue"
+		:hasText="hasText"
+	/>
 </template>
 
 <script>
@@ -19,6 +26,9 @@ export default {
 	computed: {
 		data() {
 			return this.$store.state[this.category][this.item];
+		},
+		hasText() {
+			return !(this.data.note === undefined);
 		}
 	},
 	methods: {
@@ -26,7 +36,9 @@ export default {
 			this.$store.commit(this.category + "/" + this.change, { note: e });
 		},
 		changeValue(e) {
-			this.$store.commit(this.category + "/" + this.change, { value: Number(e) });
+			if (Number(e)) {
+				this.$store.commit(this.category + "/" + this.change, { value: Number(e) });
+			}
 		}
 	}
 };

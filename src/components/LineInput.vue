@@ -2,9 +2,9 @@
 	<tr class="line-input">
 		<td>
 			<label>{{ title }}:</label>
-			<input v-if="text" type="text" :value="text" @input="$emit('updateText', $event.target.value)" />
+			<input v-if="hasText" type="text" :value="text" @input="$emit('updateText', $event.target.value)" />
 		</td>
-		<td :colspan="text ? 1 : 2">
+		<td :colspan="hasText ? 1 : 2">
 			<input type="text" class="numeric" :value="value" @input="$emit('updateValue', $event.target.value)" :readonly="readonly" />
 		</td>
 	</tr>
@@ -16,7 +16,8 @@ export default {
 		title: String,
 		text: String,
 		value: Number,
-		readonly: Boolean
+		readonly: Boolean,
+		hasText: { type: Boolean, default: true }
 	}
 };
 </script>
