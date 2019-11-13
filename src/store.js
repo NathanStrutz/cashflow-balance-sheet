@@ -6,30 +6,19 @@ import expenses from "./stores/expenses";
 import liabilities from "./stores/liabilities";
 import meta from "./stores/meta";
 import assets from "./stores/assets";
+import investments from "./stores/investments";
 
 Vue.use(Vuex);
 
-const newStock = () => ({ name: "", shares: 0, costPerShare: 0 });
-const newCd = () => ({ ...newStock(), payoutPerShare: 0 });
-const newRealEstate = () => ({ name: "", downPayment: 0, cost: 0, mortgage: 0, income: 0 });
-const newBusiness = () => ({ name: "", downPayment: 0, cost: 0, liability: 0, income: 0 });
-
 export default new Vuex.Store({
-  state: {
-    investments: {
-      realEstate: [newRealEstate(), newRealEstate(), newRealEstate(), newRealEstate()],
-      businesses: [newBusiness(), newBusiness()],
-      stocks: [newStock(), newStock()],
-      cds: [newCd()]
-    }
-  },
+  state: {},
 
   getters: {
     passiveIncome: (state, getters, rootState, rootGetters) =>
       rootState.income.interest.value +
-      state.investments.cds.reduce((sum, it) => sum + it.payoutPerShare * it.shares, 0) +
-      state.investments.realEstate.reduce((sum, it) => sum + it.income, 0) +
-      state.investments.businesses.reduce((sum, it) => sum + it.income, 0),
+      rootState.investments.cds.reduce((sum, it) => sum + it.payoutPerShare * it.shares, 0) +
+      rootState.investments.realEstate.reduce((sum, it) => sum + it.income, 0) +
+      rootState.investments.businesses.reduce((sum, it) => sum + it.income, 0),
     totalIncome: (state, getters, rootState, rootGetters) => rootState.income.salary.value - 0 + getters.passiveIncome,
     childExpenses: (state, getters, rootState, rootGetters) =>
       rootState.expenses.children.numberOfChildren * rootState.expenses.children.perChildExpense,
@@ -53,6 +42,7 @@ export default new Vuex.Store({
     expenses,
     liabilities,
     meta,
-    assets
+    assets,
+    investments
   }
 });
