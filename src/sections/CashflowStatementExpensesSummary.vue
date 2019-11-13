@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import ChildrenBox from "./ChildrenBox";
+import ChildrenBox from "./ChildrenBox.vue";
 import { mapGetters } from "vuex";
 
 export default {

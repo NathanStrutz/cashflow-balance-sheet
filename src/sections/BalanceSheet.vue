@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import BalanceSheetAssets from "./BalanceSheetAssets";
-import BalanceSheetLiabilities from "./BalanceSheetLiabilities";
+import BalanceSheetAssets from "./BalanceSheetAssets.vue";
+import BalanceSheetLiabilities from "./BalanceSheetLiabilities.vue";
 
 export default {
 	components: {

@@ -1,5 +1,4 @@
 const newStock = () => ({ name: "", shares: 0, costPerShare: 0 });
-const newCd = () => ({ ...newStock(), payoutPerShare: 0 });
 const newRealEstate = () => ({ name: "", downPayment: 0, cost: 0, mortgage: 0, income: 0 });
 const newBusiness = () => ({ name: "", downPayment: 0, cost: 0, liability: 0, income: 0 });
 

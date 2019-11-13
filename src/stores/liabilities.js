@@ -10,11 +10,11 @@ export default {
   },
   getters: {},
   mutations: {
-    changeMortgage: (state, payload) => (state.mortgage = payload.value),
-    changeSchoolLoan: (state, payload) => (state.schoolLoan = payload.value),
-    changeCarLoan: (state, payload) => (state.carLoan = payload.value),
-    changeCreditCard: (state, payload) => (state.creditCard = payload.value),
-    changeRetail: (state, payload) => (state.retail = payload.value),
-    changeBankLoan: (state, payload) => (state.bankLoan = payload.value)
+    changeMortgage: (state, { value }) => (state.mortgage = value),
+    changeSchoolLoan: (state, { value }) => (state.schoolLoan = value),
+    changeCarLoan: (state, { value }) => (state.carLoan = value),
+    changeCreditCard: (state, { value }) => (state.creditCard = value),
+    changeRetail: (state, { value }) => (state.retail = value),
+    changeBankLoan: (state, { value }) => (state.bankLoan = value)
   }
 };

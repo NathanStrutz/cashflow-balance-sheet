@@ -4,8 +4,10 @@
   "compilerOptions": {
     "checkJs": true,
     "target": "esnext",
-    "moduleResolution": "node",
+	"moduleResolution": "node",
+	"allowSyntheticDefaultImports": true,
     "baseUrl": "./",
     "paths": { "@/*": ["src/*"] }
   }
 }
+g
