@@ -16,7 +16,7 @@ export default new Vuex.Store({
   getters: {
     passiveIncome: (state, getters, rootState, rootGetters) =>
       rootState.income.interest.value +
-      rootState.investments.cds.reduce((sum, it) => sum + it.payoutPerShare * it.shares, 0) +
+      rootState.income.interest2.value +
       rootState.investments.realEstate.reduce((sum, it) => sum + it.income, 0) +
       rootState.investments.businesses.reduce((sum, it) => sum + it.income, 0),
     totalIncome: (state, getters, rootState, rootGetters) => rootState.income.salary.value - 0 + getters.passiveIncome,

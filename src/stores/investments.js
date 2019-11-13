@@ -8,8 +8,7 @@ export default {
   state: {
     realEstate: [newRealEstate(), newRealEstate(), newRealEstate(), newRealEstate()],
     businesses: [newBusiness(), newBusiness()],
-    stocks: [newStock(), newStock()],
-    cds: [newCd()]
+    stocks: [newStock(), newStock()]
   },
   getters: {
     getStock: state => index => state.stocks[index],
