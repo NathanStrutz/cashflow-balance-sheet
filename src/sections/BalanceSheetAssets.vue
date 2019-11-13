@@ -11,47 +11,19 @@
         <div>No. of Shares:</div>
         <div>Cost/Share:</div>
       </div>
-      <stock-mutual-cd-asset-row v-for="(stock, index) in stocks" :key="index" :index="index" />
+      <stock-mutual-cd-asset-row v-for="(_, index) in stocks" :key="'st' + index" :index="index" />
       <div class="line-input all-text">
         <div>Real Estate:</div>
         <div>Down Pay:</div>
         <div>Cost:</div>
       </div>
-      <div class="line-input">
-        <input type="text" />
-        <input type="text" class="numeric" />
-        <input type="text" class="numeric" />
-      </div>
-      <div class="line-input">
-        <input type="text" />
-        <input type="text" class="numeric" />
-        <input type="text" class="numeric" />
-      </div>
-      <div class="line-input">
-        <input type="text" />
-        <input type="text" class="numeric" />
-        <input type="text" class="numeric" />
-      </div>
-      <div class="line-input">
-        <input type="text" />
-        <input type="text" class="numeric" />
-        <input type="text" class="numeric" />
-      </div>
+      <real-estate-asset-row v-for="(_, index) in realEstate" :key="'re' + index" :index="index" />
       <div class="line-input all-text">
         <div>Business:</div>
         <div>Down Pay:</div>
         <div>Cost:</div>
       </div>
-      <div class="line-input">
-        <input type="text" />
-        <input type="text" class="numeric" />
-        <input type="text" class="numeric" />
-      </div>
-      <div class="line-input">
-        <input type="text" />
-        <input type="text" class="numeric" />
-        <input type="text" class="numeric" />
-      </div>
+      <business-asset-row v-for="(_, index) in businesses" :key="'bu' + index" :index="index" />
     </div>
   </div>
 </template>
@@ -59,12 +31,14 @@
 <script>
 import { mapState, mapMutations } from "vuex";
 import StockMutualCdAssetRow from "@/components/StockMutualCdAssetRow.vue";
+import RealEstateAssetRow from "@/components/RealEstateAssetRow.vue";
+import BusinessAssetRow from "@/components/BusinessAssetRow.vue";
 
 export default {
-  components: { StockMutualCdAssetRow },
+  components: { StockMutualCdAssetRow, RealEstateAssetRow, BusinessAssetRow },
   computed: {
     ...mapState("assets", ["savings"]),
-    ...mapState("investments", ["stocks"])
+    ...mapState("investments", ["stocks", "realEstate", "businesses"])
   },
   methods: {
     ...mapMutations("assets", ["changeSavings"])
