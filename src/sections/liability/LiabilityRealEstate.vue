@@ -1,12 +1,14 @@
 <template>
 	<tbody>
-		<tr v-for="(property, index) in realEstate" :key="index" :class="index === 0 ? 'line-input' : 'blank-line-input'">
-			<td>
-				<label v-if="index === 0">Real Estate:</label>
+		<tr v-for="(property, index) in realEstate" :key="index" :class="!index ? 'line-input' : 'blank-line-input'">
+			<td v-if="!index">
+				<label>RE Mortgage:</label>
+			</td>
+			<td :colspan="!index ? 1 : 2">
 				<input type="text" :value="property.name" @input="changeName($event, index)" />
 			</td>
 			<td>
-				<input type="text" class="numeric" :value="property.income" @input="changeIncome($event, index)" />
+				<input type="text" class="numeric" :value="property.mortgage" @input="changeMortgage($event, index)" />
 			</td>
 		</tr>
 	</tbody>
@@ -25,8 +27,8 @@ export default {
 		changeName(e, index) {
 			this.changeRealEstateName({ index: index, value: e.target.value });
 		},
-		changeIncome(e, index) {
-			this.changeRealEstateIncome({ index: index, value: Number(e.target.value) });
+		changeMortgage(e, index) {
+			this.changeRealEstateMortgage({ index: index, value: Number(e.target.value) });
 		}
 	}
 };

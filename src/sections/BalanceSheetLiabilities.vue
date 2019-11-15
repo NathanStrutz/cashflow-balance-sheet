@@ -8,57 +8,10 @@
 				<state-connected-input title="Car Loans" category="liabilities" item="carLoan" change="changeCarLoan" />
 				<state-connected-input title="Credit Cards" category="liabilities" item="creditCard" change="changeCreditCard" />
 				<state-connected-input title="Retail Debt" category="liabilities" item="retail" change="changeRetail" />
-				<tr class="line-input">
-					<td>
-						<label>RE Mortgage:</label>
-					</td>
-					<td colspan="2">
-						<input type="text" class="numeric" />
-					</td>
-				</tr>
-				<tr class="blank-line-input">
-					<td colspan="2">
-						<input type="text" class="numeric" />
-					</td>
-					<td>
-						<input type="text" class="numeric" />
-					</td>
-				</tr>
-				<tr class="blank-line-input">
-					<td colspan="2">
-						<input type="text" class="numeric" />
-					</td>
-					<td>
-						<input type="text" class="numeric" />
-					</td>
-				</tr>
-				<tr class="blank-line-input">
-					<td colspan="2">
-						<input type="text" class="numeric" />
-					</td>
-					<td>
-						<input type="text" class="numeric" />
-					</td>
-				</tr>
-				<tr class="line-input">
-					<td>
-						<label>Liability: (Business)</label>
-					</td>
-					<td>
-						<input type="text" class="numeric" />
-					</td>
-					<td>
-						<input type="text" class="numeric" />
-					</td>
-				</tr>
-				<tr class="blank-line-input">
-					<td colspan="2">
-						<input type="text" class="numeric" />
-					</td>
-					<td>
-						<input type="text" class="numeric" />
-					</td>
-				</tr>
+			</tbody>
+			<liability-real-estate />
+			<liability-businesses />
+			<tbody>
 				<state-connected-input title="Bank Loan" category="liabilities" item="bankLoan" change="changeBankLoan" />
 			</tbody>
 		</table>
@@ -67,9 +20,11 @@
 
 <script>
 import StateConnectedInput from "@/components/StateConnectedInput.vue";
+import LiabilityRealEstate from "./liability/LiabilityRealEstate.vue";
+import LiabilityBusinesses from "./liability/LiabilityBusinesses.vue";
 
 export default {
-	components: { StateConnectedInput }
+	components: { StateConnectedInput, LiabilityRealEstate, LiabilityBusinesses }
 };
 </script>
 
