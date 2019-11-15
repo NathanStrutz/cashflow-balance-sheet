@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import CashflowHeader from "@/sections/CashflowHeader.vue";
-import CashflowStatement from "@/sections/CashflowStatement.vue";
-import MonthlyCashFlow from "@/sections/MonthlyCashFlow.vue";
-import BalanceSheet from "@/sections/BalanceSheet.vue";
+import CashflowHeader from "@/components/CashflowHeader.vue";
+import CashflowStatement from "@/components/CashflowStatement.vue";
+import MonthlyCashFlow from "@/components/MonthlyCashFlow.vue";
+import BalanceSheet from "@/components/BalanceSheet.vue";
 
 export default {
 	name: "app",

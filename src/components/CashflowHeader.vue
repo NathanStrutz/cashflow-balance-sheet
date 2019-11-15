@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import TitleInput from "@/components/TitleInput.vue";
+import TitleInput from "./misc/TitleInput.vue";
 
 export default {
 	components: { TitleInput }

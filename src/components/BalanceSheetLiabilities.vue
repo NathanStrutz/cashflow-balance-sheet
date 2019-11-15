@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import StateConnectedInput from "@/components/StateConnectedInput.vue";
+import StateConnectedInput from "./misc/StateConnectedInput.vue";
 import LiabilityRealEstate from "./liability/LiabilityRealEstate.vue";
 import LiabilityBusinesses from "./liability/LiabilityBusinesses.vue";
 

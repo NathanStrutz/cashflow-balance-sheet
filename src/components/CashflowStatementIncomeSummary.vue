@@ -20,7 +20,7 @@
 
 <script>
 import { mapGetters } from "vuex";
-import TitleInput from "@/components/TitleInput.vue";
+import TitleInput from "./misc/TitleInput.vue";
 
 export default {
 	components: {
