@@ -30,9 +30,9 @@
 
 <script>
 import { mapState, mapMutations } from "vuex";
-import StockMutualCdAssetRow from "@/components/StockMutualCdAssetRow.vue";
-import RealEstateAssetRow from "@/components/RealEstateAssetRow.vue";
-import BusinessAssetRow from "@/components/BusinessAssetRow.vue";
+import StockMutualCdAssetRow from "./assets/StockMutualCdAssetRow.vue";
+import RealEstateAssetRow from "./assets/RealEstateAssetRow.vue";
+import BusinessAssetRow from "./assets/BusinessAssetRow.vue";
 
 export default {
   components: { StockMutualCdAssetRow, RealEstateAssetRow, BusinessAssetRow },
