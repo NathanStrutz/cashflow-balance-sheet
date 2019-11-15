@@ -9,14 +9,8 @@ export default {
   },
   getters: {},
   mutations: {
-    changeSalary(state, payload) {
-      state.salary = { ...state.salary, ...payload };
-    },
-    changeInterest(state, payload) {
-      state.interest = { ...state.interest, ...payload };
-    },
-    changeInterest2(state, payload) {
-      state.interest2 = { ...state.interest2, ...payload };
-    }
+    changeSalary: (state, payload) => (state.salary = { ...state.salary, ...payload }),
+    changeInterest: (state, payload) => (state.interest = { ...state.interest, ...payload }),
+    changeInterest2: (state, payload) => (state.interest2 = { ...state.interest2, ...payload })
   }
 };
