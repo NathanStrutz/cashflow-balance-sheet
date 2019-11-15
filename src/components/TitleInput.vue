@@ -1,10 +1,10 @@
  <template>
-  <div class="title-input">
-    <label>
-      <slot />
-    </label>
-    <input type="text" :id="id" />
-  </div>
+	<div class="title-input">
+		<label>
+			<slot />
+		</label>
+		<input type="text" :id="id" />
+	</div>
 </template>
 
 <script>
