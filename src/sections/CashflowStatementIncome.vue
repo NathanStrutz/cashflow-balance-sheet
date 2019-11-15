@@ -21,7 +21,6 @@
 
 <script>
 import StateConnectedInput from "@/components/StateConnectedInput.vue";
-import BlankLineInput from "@/components/BlankLineInput.vue";
 import { mapState, mapMutations } from "vuex";
 
 import IncomeRealEstate from "./income/IncomeRealEstate.vue";
