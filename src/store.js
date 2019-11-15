@@ -11,8 +11,6 @@ import investments from "./stores/investments";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
-
   getters: {
     passiveIncome: (state, getters, rootState, rootGetters) =>
       rootState.income.interest.value +
@@ -31,12 +29,10 @@ export default new Vuex.Store({
       rootState.expenses.retail.value +
       rootState.expenses.other.value +
       rootState.expenses.bankLoan.value +
-      getters.childExpenses,
+      getters.childExpenses +
+      rootState.expenses.miscellaneousExpense.value,
     cashFlow: (state, getters) => getters.totalIncome - getters.totalExpenses
   },
-
-  mutations: {},
-
   modules: {
     income,
     expenses,
