@@ -89,9 +89,7 @@ table {
 	}
 }
 
-input.numeric,
-input.income,
-input.expense {
+input.numeric {
 	text-align: right;
 }
 
