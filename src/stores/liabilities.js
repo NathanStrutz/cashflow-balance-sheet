@@ -8,7 +8,6 @@ export default {
     retail: 0,
     bankLoan: 0
   },
-  getters: {},
   mutations: {
     changeMortgage: (state, { value }) => (state.mortgage = value),
     changeSchoolLoan: (state, { value }) => (state.schoolLoan = value),

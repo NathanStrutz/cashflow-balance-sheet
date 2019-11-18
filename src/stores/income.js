@@ -7,7 +7,6 @@ export default {
     // Thinking pragmatically, i've played this game like 100 times and have never needed more than one interest row.
     interest2: { note: "", value: 0 }
   },
-  getters: {},
   mutations: {
     changeSalary: (state, payload) => (state.salary = { ...state.salary, ...payload }),
     changeInterest: (state, payload) => (state.interest = { ...state.interest, ...payload }),

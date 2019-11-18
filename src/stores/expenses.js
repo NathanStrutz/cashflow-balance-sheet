@@ -12,7 +12,6 @@ export default {
     miscellaneousExpense: { note: "", value: 0 },
     children: { note: "", numberOfChildren: 0, perChildExpense: 0 }
   },
-  getters: {},
   mutations: {
     changeTaxes: (state, payload) => (state.taxes = { ...state.taxes, ...payload }),
     changeMortgage: (state, payload) => (state.mortgage = { ...state.mortgage, ...payload }),

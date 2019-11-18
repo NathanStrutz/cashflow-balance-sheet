@@ -5,7 +5,6 @@ export default {
     player: "",
     auditor: ""
   },
-  getters: {},
   mutations: {
     changeProfession: (state, payload) => (state.profession = payload),
     changePlayer: (state, payload) => (state.player = payload),
