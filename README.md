@@ -2,6 +2,8 @@
 
 A game sheet that does the calculations for you.
 
+[Check it out right now](https://nathanstrutz.github.io/cashflow-balance-sheet/)!
+
 ---
 
 ## Development
