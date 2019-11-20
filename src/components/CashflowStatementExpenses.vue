@@ -30,7 +30,7 @@ export default {
 	},
 	computed: {
 		...mapState("expenses", ["children"]),
-		...mapState(["childExpenses"])
+		...mapGetters(["childExpenses"])
 	},
 	methods: {
 		...mapMutations("expenses", ["changeChildNote"])
