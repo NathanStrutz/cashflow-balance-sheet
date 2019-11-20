@@ -22,7 +22,7 @@ export default {
 		...mapState("investments", ["realEstate"])
 	},
 	methods: {
-		...mapMutations("investments", ["changeRealEstateName", "changeRealEstateIncome"]),
+		...mapMutations("investments", ["changeRealEstateName", "changeRealEstateIncome", "changeRealEstateMortgage"]),
 
 		changeName(e, index) {
 			this.changeRealEstateName({ index: index, value: e.target.value });
