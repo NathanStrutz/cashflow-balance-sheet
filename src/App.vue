@@ -98,4 +98,13 @@ input[readonly]:active,
 input[readonly]:focus {
 	background-color: rgb(255, 248, 236);
 }
+
+@media print {
+	html {
+		font-size: 18px;
+	}
+	input[type="text"] {
+		border-left-width: 0;
+	}
+}
 </style>
