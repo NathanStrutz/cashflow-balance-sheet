@@ -1,6 +1,8 @@
 import Vue from "vue";
 import Vuex from "vuex";
 
+import localStoragePlugin from "./stores/plugins/localstorage";
+
 import income from "./stores/income";
 import expenses from "./stores/expenses";
 import liabilities from "./stores/liabilities";
@@ -40,5 +42,6 @@ export default new Vuex.Store({
     meta,
     assets,
     investments
-  }
+  },
+  plugins: [localStoragePlugin]
 });
