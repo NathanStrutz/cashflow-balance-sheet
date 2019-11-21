@@ -2,19 +2,23 @@ const newStock = () => ({ name: "", shares: 0, costPerShare: 0 });
 const newRealEstate = () => ({ name: "", downPayment: 0, cost: 0, mortgage: 0, income: 0 });
 const newBusiness = () => ({ name: "", downPayment: 0, cost: 0, liability: 0, income: 0 });
 
+const initialState = () => ({
+  realEstate: [newRealEstate(), newRealEstate(), newRealEstate(), newRealEstate()],
+  businesses: [newBusiness(), newBusiness()],
+  stocks: [newStock(), newStock()]
+});
+
 export default {
   namespaced: true,
-  state: {
-    realEstate: [newRealEstate(), newRealEstate(), newRealEstate(), newRealEstate()],
-    businesses: [newBusiness(), newBusiness()],
-    stocks: [newStock(), newStock()]
-  },
+  state: initialState(),
   getters: {
     getStock: state => index => state.stocks[index],
     getRealEstate: state => index => state.realEstate[index],
     getBusiness: state => index => state.businesses[index]
   },
   mutations: {
+    resetState: state => Object.assign(state, initialState()),
+
     // Stocks / Mutual Funds / CDs
     changeStockName: (state, { index, value }) => (state.stocks[index].name = value),
     changeStockShares: (state, { index, value }) => (state.stocks[index].shares = value),

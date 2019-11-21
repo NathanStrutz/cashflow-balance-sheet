@@ -1,18 +1,22 @@
+const initialState = () => ({
+  taxes: { note: "", value: 0 },
+  mortgage: { note: "", value: 0 },
+  schoolLoan: { note: "", value: 0 },
+  carLoan: { note: "", value: 0 },
+  creditCard: { note: "", value: 0 },
+  retail: { note: "", value: 0 },
+  other: { note: "", value: 0 },
+  bankLoan: { note: "", value: 0 },
+  miscellaneousExpense: { note: "", value: 0 },
+  children: { note: "", numberOfChildren: 0, perChildExpense: 0 }
+});
+
 export default {
   namespaced: true,
-  state: {
-    taxes: { note: "", value: 0 },
-    mortgage: { note: "", value: 0 },
-    schoolLoan: { note: "", value: 0 },
-    carLoan: { note: "", value: 0 },
-    creditCard: { note: "", value: 0 },
-    retail: { note: "", value: 0 },
-    other: { note: "", value: 0 },
-    bankLoan: { note: "", value: 0 },
-    miscellaneousExpense: { note: "", value: 0 },
-    children: { note: "", numberOfChildren: 0, perChildExpense: 0 }
-  },
+  state: initialState(),
   mutations: {
+    resetState: state => Object.assign(state, initialState()),
+
     changeTaxes: (state, payload) => (state.taxes = { ...state.taxes, ...payload }),
     changeMortgage: (state, payload) => (state.mortgage = { ...state.mortgage, ...payload }),
     changeSchoolLoan: (state, payload) => (state.schoolLoan = { ...state.schoolLoan, ...payload }),

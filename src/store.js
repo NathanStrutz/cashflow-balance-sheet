@@ -35,6 +35,17 @@ export default new Vuex.Store({
       rootState.expenses.miscellaneousExpense.value,
     cashFlow: (state, getters) => getters.totalIncome - getters.totalExpenses
   },
+  actions: {
+    resetState: ({ commit, dispatch }) => {
+      commit("income/resetState");
+      commit("expenses/resetState");
+      commit("liabilities/resetState");
+      commit("liabilities/resetState");
+      commit("meta/resetState");
+      commit("assets/resetState");
+      commit("investments/resetState");
+    }
+  },
   modules: {
     income,
     expenses,
