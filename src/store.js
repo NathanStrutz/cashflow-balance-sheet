@@ -2,6 +2,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 
 import localStoragePlugin from "./stores/plugins/localstorage";
+import resetStatePlugin from "./stores/plugins/resetstate";
 
 import income from "./stores/income";
 import expenses from "./stores/expenses";
@@ -35,16 +36,8 @@ export default new Vuex.Store({
       rootState.expenses.miscellaneousExpense.value,
     cashFlow: (state, getters) => getters.totalIncome - getters.totalExpenses
   },
-  actions: {
-    resetState: ({ commit, dispatch }) => {
-      commit("income/resetState");
-      commit("expenses/resetState");
-      commit("liabilities/resetState");
-      commit("liabilities/resetState");
-      commit("meta/resetState");
-      commit("assets/resetState");
-      commit("investments/resetState");
-    }
+  mutations: {
+    "RESET-STATE": () => {}
   },
   modules: {
     income,
@@ -54,5 +47,5 @@ export default new Vuex.Store({
     assets,
     investments
   },
-  plugins: [localStoragePlugin]
+  plugins: [resetStatePlugin, localStoragePlugin]
 });

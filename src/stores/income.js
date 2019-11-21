@@ -10,8 +10,6 @@ export default {
   namespaced: true,
   state: initialState(),
   mutations: {
-    resetState: state => Object.assign(state, initialState()),
-
     changeSalary: (state, payload) => (state.salary = { ...state.salary, ...payload }),
     changeInterest: (state, payload) => (state.interest = { ...state.interest, ...payload }),
     changeInterest2: (state, payload) => (state.interest2 = { ...state.interest2, ...payload })

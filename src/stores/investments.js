@@ -17,8 +17,6 @@ export default {
     getBusiness: state => index => state.businesses[index]
   },
   mutations: {
-    resetState: state => Object.assign(state, initialState()),
-
     // Stocks / Mutual Funds / CDs
     changeStockName: (state, { index, value }) => (state.stocks[index].name = value),
     changeStockShares: (state, { index, value }) => (state.stocks[index].shares = value),

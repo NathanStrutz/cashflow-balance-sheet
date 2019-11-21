@@ -15,8 +15,6 @@ export default {
   namespaced: true,
   state: initialState(),
   mutations: {
-    resetState: state => Object.assign(state, initialState()),
-
     changeTaxes: (state, payload) => (state.taxes = { ...state.taxes, ...payload }),
     changeMortgage: (state, payload) => (state.mortgage = { ...state.mortgage, ...payload }),
     changeSchoolLoan: (state, payload) => (state.schoolLoan = { ...state.schoolLoan, ...payload }),

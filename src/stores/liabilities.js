@@ -11,8 +11,6 @@ export default {
   namespaced: true,
   state: initialState(),
   mutations: {
-    resetState: state => Object.assign(state, initialState()),
-
     changeMortgage: (state, { value }) => (state.mortgage = value),
     changeSchoolLoan: (state, { value }) => (state.schoolLoan = value),
     changeCarLoan: (state, { value }) => (state.carLoan = value),
