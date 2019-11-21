@@ -2,8 +2,6 @@ const initialState = () => ({
   savings: 0
 });
 
-import Vuex from "vuex";
-
 export default {
   namespaced: true,
   state: initialState(),
