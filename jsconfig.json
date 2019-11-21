@@ -4,10 +4,9 @@
   "compilerOptions": {
     "checkJs": true,
     "target": "esnext",
-	"moduleResolution": "node",
-	"allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
     "baseUrl": "./",
     "paths": { "@/*": ["src/*"] }
   }
 }
-g
