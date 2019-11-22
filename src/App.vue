@@ -106,5 +106,8 @@ input[readonly]:focus {
   input[type="text"] {
     border-left-width: 0;
   }
+  .no-print {
+    display: none !important;
+  }
 }
 </style>
