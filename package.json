@@ -7,7 +7,7 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "core-js": "^3.3.4",
+    "core-js": "^3.4.2",
     "vue": "^2.6.10",
     "vuex": "^3.0.1"
   },
@@ -15,7 +15,7 @@
     "@vue/cli-plugin-babel": "^4.0.5",
     "@vue/cli-plugin-vuex": "^4.0.5",
     "@vue/cli-service": "^4.0.5",
-    "sass": "^1.23.1",
+    "sass": "^1.23.7",
     "sass-loader": "^8.0.0",
     "vue-template-compiler": "^2.6.10"
   },
