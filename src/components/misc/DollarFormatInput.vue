@@ -2,6 +2,7 @@
   <input
     type="text"
     class="numeric"
+    :readonly="readonly"
     @input="setNewValue($event.target.value)"
     :value="displayValue"
     @focus="focus"
@@ -13,11 +14,11 @@
 <script>
 export default {
   props: {
-    value: Number
+    value: Number,
+    readonly: { type: Boolean, default: false }
   },
   data() {
     return {
-      // valueBeforeApplication: this.value,
       isFocused: false
     };
   },
@@ -32,10 +33,12 @@ export default {
   methods: {
     focus() {
       // Avoid annoying re-selecting of the text value
-      if (!this.isFocused) {
-        // select all content for easy-overwriting
+      if (!this.isFocused && !this.readonly) {
         this.isFocused = true;
+
+        // select all content for easy-overwriting
         const el = this.$refs.thisInput;
+        // using nextTick to wait for the editing value to drop in
         this.$nextTick(() => el.select());
       }
     },
@@ -45,17 +48,17 @@ export default {
     setNewValue(val) {
       // only change the value if the user is intentionally changing it
       // (otherwise it may be emitting the displayFormattedValue as the new value)
-
       const valJustNumbers = parseInt(val.replace(/[^\d]/g, ""));
 
       // also only if the value is really a number
-      if (this.isFocused && Number.isInteger(valJustNumbers)) {
-        this.$emit("input", valJustNumbers);
+      if (this.isFocused) {
+        if (valJustNumbers) {
+          this.$emit("input", valJustNumbers);
+        } else {
+          this.$emit("input", 0);
+        }
       }
     }
   }
 };
 </script>
-
-<style>
-</style>

@@ -8,7 +8,7 @@
         <input type="text" :value="property.name" @input="changeName($event, index)" />
       </td>
       <td>
-        <input type="text" class="numeric" :value="property.mortgage" @input="changeMortgage($event, index)" />
+        <dollar-format-input :value="property.mortgage" @input="changeMortgage($event, index)" />
       </td>
     </tr>
   </tbody>
@@ -16,8 +16,10 @@
 
 <script>
 import { mapState, mapMutations } from "vuex";
+import DollarFormatInput from "@/components/misc/DollarFormatInput.vue";
 
 export default {
+  components: { DollarFormatInput },
   computed: {
     ...mapState("investments", ["realEstate"])
   },
@@ -27,8 +29,8 @@ export default {
     changeName(e, index) {
       this.changeRealEstateName({ index: index, value: e.target.value });
     },
-    changeMortgage(e, index) {
-      this.changeRealEstateMortgage({ index: index, value: Number(e.target.value) });
+    changeMortgage(value, index) {
+      this.changeRealEstateMortgage({ index: index, value: value });
     }
   }
 };
