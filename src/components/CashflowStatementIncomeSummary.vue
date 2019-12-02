@@ -1,7 +1,7 @@
 <template>
   <div id="income-summary">
     <div id="auditor-area">
-      <title-input id="auditor">Auditor</title-input>
+      <title-input :value="auditor" @input="changeAuditor($event)">Auditor</title-input>
       <sub>Person on your right</sub>
     </div>
     <div id="passive-income-area">
@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapState, mapMutations } from "vuex";
 import TitleInput from "./misc/TitleInput.vue";
 
 export default {
@@ -27,7 +27,11 @@ export default {
     TitleInput
   },
   computed: {
-    ...mapGetters(["auditor", "passiveIncome", "totalIncome"])
+    ...mapState("meta", ["auditor"]),
+    ...mapGetters(["passiveIncome", "totalIncome"])
+  },
+  methods: {
+    ...mapMutations("meta", ["changeAuditor"])
   }
 };
 </script>

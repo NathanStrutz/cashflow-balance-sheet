@@ -1,8 +1,8 @@
 <template>
   <div>
     <header>
-      <title-input id="profession">Profession</title-input>
-      <title-input id="player">Player</title-input>
+      <title-input :value="profession" @input="changeProfession($event)">Profession</title-input>
+      <title-input :value="player" @input="changePlayer($event)">Player</title-input>
       <header-menu />
     </header>
     <p>
@@ -14,9 +14,16 @@
 <script>
 import TitleInput from "./misc/TitleInput.vue";
 import HeaderMenu from "./application/HeaderMenu.vue";
+import { mapState, mapMutations } from "vuex";
 
 export default {
-  components: { TitleInput, HeaderMenu }
+  components: { TitleInput, HeaderMenu },
+  computed: {
+    ...mapState("meta", ["profession", "player"])
+  },
+  methods: {
+    ...mapMutations("meta", ["changeProfession", "changePlayer"])
+  }
 };
 </script>
 

@@ -3,14 +3,14 @@
     <label>
       <slot />
     </label>
-    <input type="text" :id="id" />
+    <input type="text" :value="value" @input="$emit('input', $event.target.value)" />
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    id: String
+    value: String
   }
 };
 </script>
