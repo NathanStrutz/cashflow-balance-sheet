@@ -4,7 +4,7 @@
     <div id="asset-list">
       <div class="line-input">
         <label for="savings">Savings:</label>
-        <dollar-format-input :value="savings" @input="changeSavings($event)" :readonly="readonly" />
+        <dollar-format-input :value="savings" @input="changeSavings($event)" />
       </div>
       <div class="line-input all-text">
         <div>Stocks/Mutual's/CDs</div>

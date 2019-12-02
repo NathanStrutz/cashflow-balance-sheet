@@ -1,7 +1,7 @@
 <template>
   <div class="line-input">
     <input type="text" autocomplete="off" :value="property.name" @input="changeName" />
-    <dollar-format-input :value="property.downPayment" @input="changeDownPayment($event)" :readonly="readonly" />
+    <dollar-format-input :value="property.downPayment" @input="changeDownPayment($event)" />
     <dollar-format-input :value="property.cost" @input="changeCost($event)" />
   </div>
 </template>
