@@ -4,38 +4,39 @@
     <div id="asset-list">
       <div class="line-input">
         <label for="savings">Savings:</label>
-        <input type="text" autocomplete="off" id="savings" class="numeric" :value="savings" @input="changeSavings($event.target.value)" />
+        <dollar-format-input :value="savings" @input="changeSavings($event)" :readonly="readonly" />
       </div>
       <div class="line-input all-text">
         <div>Stocks/Mutual's/CDs</div>
         <div>No. of Shares:</div>
         <div>Cost/Share:</div>
       </div>
-      <stock-mutual-cd-asset-row v-for="(_, index) in stocks" :key="'st' + index" :index="index" />
+      <stock-mutual-cd-asset-row v-for="(_, index) in stocks" :key="'stocks-' + index" :index="index" />
       <div class="line-input all-text">
         <div>Real Estate:</div>
         <div>Down Pay:</div>
         <div>Cost:</div>
       </div>
-      <real-estate-asset-row v-for="(_, index) in realEstate" :key="'re' + index" :index="index" />
+      <real-estate-asset-row v-for="(_, index) in realEstate" :key="'real-assets-' + index" :index="index" />
       <div class="line-input all-text">
         <div>Business:</div>
         <div>Down Pay:</div>
         <div>Cost:</div>
       </div>
-      <business-asset-row v-for="(_, index) in businesses" :key="'bu' + index" :index="index" />
+      <business-asset-row v-for="(_, index) in businesses" :key="'business-assets-' + index" :index="index" />
     </div>
   </div>
 </template>
 
 <script>
 import { mapState, mapMutations } from "vuex";
+import DollarFormatInput from "@/components/misc/DollarFormatInput.vue";
 import StockMutualCdAssetRow from "./assets/StockMutualCdAssetRow.vue";
 import RealEstateAssetRow from "./assets/RealEstateAssetRow.vue";
 import BusinessAssetRow from "./assets/BusinessAssetRow.vue";
 
 export default {
-  components: { StockMutualCdAssetRow, RealEstateAssetRow, BusinessAssetRow },
+  components: { DollarFormatInput, StockMutualCdAssetRow, RealEstateAssetRow, BusinessAssetRow },
   computed: {
     ...mapState("assets", ["savings"]),
     ...mapState("investments", ["stocks", "realEstate", "businesses"])

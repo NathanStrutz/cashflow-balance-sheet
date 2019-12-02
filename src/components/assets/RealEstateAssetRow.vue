@@ -1,15 +1,17 @@
 <template>
   <div class="line-input">
     <input type="text" autocomplete="off" :value="property.name" @input="changeName" />
-    <input type="text" autocomplete="off" class="numeric" :value="property.downPayment" @input="changeDownPayment" />
-    <input type="text" autocomplete="off" class="numeric" :value="property.cost" @input="changeCost" />
+    <dollar-format-input :value="property.downPayment" @input="changeDownPayment($event)" :readonly="readonly" />
+    <dollar-format-input :value="property.cost" @input="changeCost($event)" />
   </div>
 </template>
 
 <script>
 import { mapState, mapGetters } from "vuex";
+import DollarFormatInput from "@/components/misc/DollarFormatInput.vue";
 
 export default {
+  components: { DollarFormatInput },
   props: {
     index: Number
   },
@@ -23,11 +25,11 @@ export default {
     changeName(e) {
       this.$store.commit("investments/changeRealEstateName", { index: this.index, value: e.target.value });
     },
-    changeDownPayment(e) {
-      this.$store.commit("investments/changeRealEstateDownPayment", { index: this.index, value: e.target.value });
+    changeDownPayment(value) {
+      this.$store.commit("investments/changeRealEstateDownPayment", { index: this.index, value: value });
     },
-    changeCost(e) {
-      this.$store.commit("investments/changeRealEstateCost", { index: this.index, value: e.target.value });
+    changeCost(value) {
+      this.$store.commit("investments/changeRealEstateCost", { index: this.index, value: value });
     }
   }
 };
