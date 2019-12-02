@@ -3,17 +3,18 @@
     <children-box />
     <div class="total-io">
       <label for="total-expenses">Total Expenses:</label>
-      <input type="text" autocomplete="off" id="total-expenses" :value="totalExpenses" class="numeric" readonly />
+      <dollar-format-input id="total-expenses" :value="totalExpenses" readonly />
     </div>
   </div>
 </template>
 
 <script>
-import ChildrenBox from "./ChildrenBox.vue";
 import { mapGetters } from "vuex";
+import DollarFormatInput from "@/components/misc/DollarFormatInput.vue";
+import ChildrenBox from "./ChildrenBox.vue";
 
 export default {
-  components: { ChildrenBox },
+  components: { DollarFormatInput, ChildrenBox },
   computed: {
     ...mapGetters(["totalExpenses"])
   }

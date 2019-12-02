@@ -20,22 +20,17 @@
         Per Child
         <br />Expense:
       </label>
-      <input
-        type="text"
-        autocomplete="off"
-        id="per-child-expense"
-        :value="children.perChildExpense"
-        @input="changePerChildExpense($event.target.value)"
-        class="numeric"
-      />
+      <dollar-format-input id="per-child-expense" :value="children.perChildExpense" @input="changePerChildExpense($event)" />
     </div>
   </div>
 </template>
 
 <script>
 import { mapState, mapMutations } from "vuex";
+import DollarFormatInput from "@/components/misc/DollarFormatInput.vue";
 
 export default {
+  components: { DollarFormatInput },
   computed: {
     ...mapState("expenses", ["children"])
   },

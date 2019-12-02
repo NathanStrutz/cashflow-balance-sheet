@@ -5,15 +5,17 @@
         Monthly Cash Flow:
         <sub>(Pay Check)</sub>
       </label>
-      <input type="text" autocomplete="off" id="monthly-cash-flow" :value="cashFlow" class="numeric" readonly />
+      <dollar-format-input id="monthly-cash-flow" :value="cashFlow" readonly />
     </div>
   </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
+import DollarFormatInput from "@/components/misc/DollarFormatInput.vue";
 
 export default {
+  components: { DollarFormatInput },
   computed: {
     ...mapGetters(["cashFlow"])
   }

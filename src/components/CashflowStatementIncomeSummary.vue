@@ -7,25 +7,24 @@
     <div id="passive-income-area">
       <div class="passive-income-area">
         <label>Passive Income =</label>
-        <input type="text" autocomplete="off" id="passive-income" :value="passiveIncome" class="numeric" readonly />
+        <dollar-format-input id="passive-income" :value="passiveIncome" readonly />
       </div>
       <sub>(Cash flows from Interest + Dividends + Real Estate + Businesses</sub>
     </div>
     <div class="total-io">
       <label for="total-income">Total Income:</label>
-      <input type="text" autocomplete="off" id="total-income" :value="totalIncome" class="numeric" readonly />
+      <dollar-format-input id="total-income" :value="totalIncome" readonly />
     </div>
   </div>
 </template>
 
 <script>
 import { mapGetters, mapState, mapMutations } from "vuex";
+import DollarFormatInput from "@/components/misc/DollarFormatInput.vue";
 import TitleInput from "./misc/TitleInput.vue";
 
 export default {
-  components: {
-    TitleInput
-  },
+  components: { DollarFormatInput, TitleInput },
   computed: {
     ...mapState("meta", ["auditor"]),
     ...mapGetters(["passiveIncome", "totalIncome"])
