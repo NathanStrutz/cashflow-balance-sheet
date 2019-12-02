@@ -5,7 +5,7 @@
         Monthly Cash Flow:
         <sub>(Pay Check)</sub>
       </label>
-      <input type="text" id="monthly-cash-flow" :value="cashFlow" class="numeric" readonly />
+      <input type="text" autocomplete="off" id="monthly-cash-flow" :value="cashFlow" class="numeric" readonly />
     </div>
   </div>
 </template>

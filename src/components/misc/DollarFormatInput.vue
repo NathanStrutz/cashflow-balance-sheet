@@ -1,6 +1,7 @@
 <template>
   <input
     type="text"
+    autocomplete="off"
     class="numeric"
     :readonly="readonly"
     @input="setNewValue($event.target.value)"

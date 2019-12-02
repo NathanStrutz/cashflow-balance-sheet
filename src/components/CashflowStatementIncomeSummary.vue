@@ -7,13 +7,13 @@
     <div id="passive-income-area">
       <div class="passive-income-area">
         <label>Passive Income =</label>
-        <input type="text" id="passive-income" :value="passiveIncome" class="numeric" readonly />
+        <input type="text" autocomplete="off" id="passive-income" :value="passiveIncome" class="numeric" readonly />
       </div>
       <sub>(Cash flows from Interest + Dividends + Real Estate + Businesses</sub>
     </div>
     <div class="total-io">
       <label for="total-income">Total Income:</label>
-      <input type="text" id="total-income" :value="totalIncome" class="numeric" readonly />
+      <input type="text" autocomplete="off" id="total-income" :value="totalIncome" class="numeric" readonly />
     </div>
   </div>
 </template>

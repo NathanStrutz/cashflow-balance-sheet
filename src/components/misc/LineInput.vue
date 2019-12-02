@@ -2,7 +2,7 @@
   <tr :class="title ? 'line-input' : 'blank-line-input'">
     <td>
       <label v-if="title">{{ title }}:</label>
-      <input v-if="hasText" type="text" :value="text" @input="$emit('updateText', $event.target.value)" />
+      <input v-if="hasText" type="text" autocomplete="off" :value="text" @input="$emit('updateText', $event.target.value)" />
     </td>
     <td :colspan="hasText ? 1 : 2">
       <dollar-format-input :value="value" @input="$emit('updateValue', $event)" :readonly="readonly" />

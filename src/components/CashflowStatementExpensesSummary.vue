@@ -3,7 +3,7 @@
     <children-box />
     <div class="total-io">
       <label for="total-expenses">Total Expenses:</label>
-      <input type="text" id="total-expenses" :value="totalExpenses" class="numeric" readonly />
+      <input type="text" autocomplete="off" id="total-expenses" :value="totalExpenses" class="numeric" readonly />
     </div>
   </div>
 </template>

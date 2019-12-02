@@ -1,8 +1,8 @@
 <template>
   <div class="line-input">
-    <input type="text" :value="stock.name" @input="changeStockName" />
-    <input type="text" class="numeric" :value="stock.shares" @input="changeStockShares" />
-    <input type="text" class="numeric" :value="stock.costPerShare" @input="changeStockCostPerShare" />
+    <input type="text" autocomplete="off" :value="stock.name" @input="changeStockName" />
+    <input type="text" autocomplete="off" class="numeric" :value="stock.shares" @input="changeStockShares" />
+    <input type="text" autocomplete="off" class="numeric" :value="stock.costPerShare" @input="changeStockCostPerShare" />
   </div>
 </template>
 

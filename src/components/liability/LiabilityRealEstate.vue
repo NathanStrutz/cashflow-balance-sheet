@@ -5,7 +5,7 @@
         <label>RE Mortgage:</label>
       </td>
       <td :colspan="!index ? 1 : 2">
-        <input type="text" :value="property.name" @input="changeName($event, index)" />
+        <input type="text" autocomplete="off" :value="property.name" @input="changeName($event, index)" />
       </td>
       <td>
         <dollar-format-input :value="property.mortgage" @input="changeMortgage($event, index)" />

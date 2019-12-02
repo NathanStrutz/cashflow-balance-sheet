@@ -7,6 +7,7 @@
       </label>
       <input
         type="text"
+        autocomplete="off"
         id="number-of-children"
         :value="children.numberOfChildren"
         @input="changeNumberOfChildren($event.target.value)"
@@ -21,6 +22,7 @@
       </label>
       <input
         type="text"
+        autocomplete="off"
         id="per-child-expense"
         :value="children.perChildExpense"
         @input="changePerChildExpense($event.target.value)"

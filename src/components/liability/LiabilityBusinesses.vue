@@ -5,7 +5,7 @@
         <label>Liability: (Business)</label>
       </td>
       <td :colspan="!index ? 1 : 2">
-        <input type="text" :value="business.name" @input="changeName($event, index)" />
+        <input type="text" autocomplete="off" :value="business.name" @input="changeName($event, index)" />
       </td>
       <td>
         <dollar-format-input :value="business.liability" @input="changeLiability($event, index)" />

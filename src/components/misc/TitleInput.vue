@@ -3,7 +3,7 @@
     <label>
       <slot />
     </label>
-    <input type="text" :value="value" @input="$emit('input', $event.target.value)" />
+    <input type="text" autocomplete="off" :value="value" @input="$emit('input', $event.target.value)" />
   </div>
 </template>
 

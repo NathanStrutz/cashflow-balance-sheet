@@ -4,7 +4,7 @@
     <div id="asset-list">
       <div class="line-input">
         <label for="savings">Savings:</label>
-        <input type="text" id="savings" class="numeric" :value="savings" @input="changeSavings($event.target.value)" />
+        <input type="text" autocomplete="off" id="savings" class="numeric" :value="savings" @input="changeSavings($event.target.value)" />
       </div>
       <div class="line-input all-text">
         <div>Stocks/Mutual's/CDs</div>

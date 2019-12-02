@@ -1,8 +1,8 @@
 <template>
   <div class="line-input">
-    <input type="text" :value="property.name" @input="changeName" />
-    <input type="text" class="numeric" :value="property.downPayment" @input="changeDownPayment" />
-    <input type="text" class="numeric" :value="property.cost" @input="changeCost" />
+    <input type="text" autocomplete="off" :value="property.name" @input="changeName" />
+    <input type="text" autocomplete="off" class="numeric" :value="property.downPayment" @input="changeDownPayment" />
+    <input type="text" autocomplete="off" class="numeric" :value="property.cost" @input="changeCost" />
   </div>
 </template>
 
