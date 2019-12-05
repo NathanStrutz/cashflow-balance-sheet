@@ -1,28 +1,28 @@
 <template>
   <div>
     <h2>Income Statement</h2>
-    <section id="cashflow-statement-area">
-      <cashflow-statement-income />
-      <cashflow-statement-income-summary />
+    <section id="statement-area">
+      <statement-income />
+      <statement-income-summary />
 
-      <cashflow-statement-expenses />
-      <cashflow-statement-expenses-summary />
+      <statement-expenses />
+      <statement-expenses-summary />
     </section>
   </div>
 </template>
 
 <script>
-import CashflowStatementIncome from "./CashflowStatementIncome.vue";
-import CashflowStatementIncomeSummary from "./CashflowStatementIncomeSummary.vue";
-import CashflowStatementExpenses from "./CashflowStatementExpenses.vue";
-import CashflowStatementExpensesSummary from "./CashflowStatementExpensesSummary.vue";
+import StatementIncome from "./StatementIncome.vue";
+import StatementIncomeSummary from "./StatementIncomeSummary.vue";
+import StatementExpenses from "./StatementExpenses.vue";
+import StatementExpensesSummary from "./StatementExpensesSummary.vue";
 
 export default {
   components: {
-    CashflowStatementIncome,
-    CashflowStatementIncomeSummary,
-    CashflowStatementExpenses,
-    CashflowStatementExpensesSummary
+    StatementIncome,
+    StatementIncomeSummary,
+    StatementExpenses,
+    StatementExpensesSummary
   }
 };
 </script>
@@ -42,7 +42,7 @@ export default {
 }
 
 /* Thanks grid.layoutit.com?id=D1i1b4l */
-#cashflow-statement-area {
+#statement-area {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "income income-summary" "expenses expense-summary";

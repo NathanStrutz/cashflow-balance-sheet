@@ -1,21 +1,21 @@
 <template>
   <div>
     <cashflow-header />
-    <cashflow-statement />
+    <statement-area />
     <monthly-cash-flow />
-    <balance-sheet />
+    <balance-sheet-area />
   </div>
 </template>
 
 <script>
 import CashflowHeader from "@/components/CashflowHeader.vue";
-import CashflowStatement from "@/components/statement/CashflowStatement.vue";
+import StatementArea from "@/components/statement/StatementArea.vue";
 import MonthlyCashFlow from "@/components/MonthlyCashFlow.vue";
-import BalanceSheet from "@/components/balancesheet/BalanceSheet.vue";
+import BalanceSheetArea from "@/components/balancesheet/BalanceSheetArea.vue";
 
 export default {
   name: "app",
-  components: { CashflowHeader, CashflowStatement, MonthlyCashFlow, BalanceSheet }
+  components: { CashflowHeader, StatementArea, MonthlyCashFlow, BalanceSheetArea }
 };
 </script>
 
