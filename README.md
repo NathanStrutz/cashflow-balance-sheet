@@ -11,6 +11,7 @@ A game sheet that does the calculations for you.
 Did you...
 
 - Play CashFlow and run out of game sheets?
+- Need some replacement CashFlow Rat Race game sheets?
 - Decide that you want to be rich but hate math?
 - Just want an interactive, printable, mobile friendly CashFlow game sheet?
 
