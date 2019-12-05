@@ -1,12 +1,12 @@
 <template>
   <div id="header-menu" class="no-print">
     <span class="menuHoverOpen">
-      <a href="javascript:" @click.prevent><img src="@/img/more_vert.svg"/></a>
+      <a href="javascript:" @click.prevent><img src="@/images/more_vert.svg"/></a>
       <div class="menu">
         <ul>
-          <li @click="github"><img src="@/img/github.svg" width="24" height="24" /> <span>GitHub Project</span></li>
-          <li @click="save"><img src="@/img/save.svg" width="24" height="24" /> <span>Already Saved Automatically</span></li>
-          <li @click="RESET_STATE"><img src="@/img/delete_sweep.svg" width="24" height="24" /> <span>Reset Numbers</span></li>
+          <li @click="github"><img src="@/images/github.svg" width="24" height="24" /> <span>GitHub Project</span></li>
+          <li @click="save"><img src="@/images/save.svg" width="24" height="24" /> <span>Already Saved Automatically</span></li>
+          <li @click="RESET_STATE"><img src="@/images/delete_sweep.svg" width="24" height="24" /> <span>Reset Numbers</span></li>
         </ul>
       </div>
     </span>
