@@ -21,7 +21,7 @@
 <script>
 import { mapGetters, mapState, mapMutations } from "vuex";
 import DollarFormatInput from "@/components/misc/DollarFormatInput.vue";
-import TitleInput from "./misc/TitleInput.vue";
+import TitleInput from "@/components/misc/TitleInput.vue";
 
 export default {
   components: { DollarFormatInput, TitleInput },

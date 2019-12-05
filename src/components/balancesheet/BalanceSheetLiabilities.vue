@@ -19,9 +19,9 @@
 </template>
 
 <script>
-import StateConnectedValueInput from "./misc/StateConnectedValueInput.vue";
-import LiabilityRealEstate from "./liability/LiabilityRealEstate.vue";
-import LiabilityBusinesses from "./liability/LiabilityBusinesses.vue";
+import StateConnectedValueInput from "@/components/misc/StateConnectedValueInput.vue";
+import LiabilityRealEstate from "./liabilities/LiabilityRealEstate.vue";
+import LiabilityBusinesses from "./liabilities/LiabilityBusinesses.vue";
 
 export default {
   components: { StateConnectedValueInput, LiabilityRealEstate, LiabilityBusinesses }

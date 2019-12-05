@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import StateConnectedInput from "./misc/StateConnectedInput.vue";
+import StateConnectedInput from "@/components/misc/StateConnectedInput.vue";
 import { mapState, mapMutations } from "vuex";
 
 import IncomeRealEstate from "./income/IncomeRealEstate.vue";

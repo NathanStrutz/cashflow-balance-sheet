@@ -9,9 +9,9 @@
 
 <script>
 import CashflowHeader from "@/components/CashflowHeader.vue";
-import CashflowStatement from "@/components/CashflowStatement.vue";
+import CashflowStatement from "@/components/statement/CashflowStatement.vue";
 import MonthlyCashFlow from "@/components/MonthlyCashFlow.vue";
-import BalanceSheet from "@/components/BalanceSheet.vue";
+import BalanceSheet from "@/components/balancesheet/BalanceSheet.vue";
 
 export default {
   name: "app",

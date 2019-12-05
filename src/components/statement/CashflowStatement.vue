@@ -12,10 +12,10 @@
 </template>
 
 <script>
-import CashflowStatementIncome from "./CashflowStatementIncome";
-import CashflowStatementIncomeSummary from "./CashflowStatementIncomeSummary";
-import CashflowStatementExpenses from "./CashflowStatementExpenses";
-import CashflowStatementExpensesSummary from "./CashflowStatementExpensesSummary";
+import CashflowStatementIncome from "./CashflowStatementIncome.vue";
+import CashflowStatementIncomeSummary from "./CashflowStatementIncomeSummary.vue";
+import CashflowStatementExpenses from "./CashflowStatementExpenses.vue";
+import CashflowStatementExpensesSummary from "./CashflowStatementExpensesSummary.vue";
 
 export default {
   components: {

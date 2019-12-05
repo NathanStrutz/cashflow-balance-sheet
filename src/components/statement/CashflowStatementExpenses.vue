@@ -19,8 +19,8 @@
 </template>
 
 <script>
-import StateConnectedInput from "./misc/StateConnectedInput.vue";
-import LineInput from "./misc/LineInput.vue";
+import StateConnectedInput from "@/components/misc/StateConnectedInput.vue";
+import LineInput from "@/components/misc/LineInput.vue";
 import { mapGetters, mapMutations, mapState } from "vuex";
 
 export default {
