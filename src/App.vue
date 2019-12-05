@@ -109,5 +109,8 @@ input[readonly]:focus {
   .no-print {
     display: none !important;
   }
+  input {
+    color: #fff;
+  }
 }
 </style>
