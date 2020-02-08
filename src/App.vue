@@ -97,6 +97,7 @@ input[readonly]:hover,
 input[readonly]:active,
 input[readonly]:focus {
   background-color: rgb(255, 248, 236);
+  cursor: default;
 }
 
 @media print {
