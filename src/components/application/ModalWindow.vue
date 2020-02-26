@@ -44,8 +44,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/palette.scss";
-
 .modal-fade-enter,
 .modal-fade-leave-active {
   opacity: 0;
