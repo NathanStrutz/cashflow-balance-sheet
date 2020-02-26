@@ -1,3 +1,5 @@
+<!-- State-connected, just provide the property index -->
+<!-- This replaces the property name <input> to provide property editing and add-a-row buttons -->
 <template>
   <span class="hover-inline-buttons">
     <input type="text" autocomplete="off" :value="property.name" @input="changeName($event, index)" />
