@@ -5,7 +5,7 @@
         <label>Liability: (Business)</label>
       </td>
       <td :colspan="!index ? 1 : 2">
-        <input type="text" autocomplete="off" :value="business.name" @input="changeName($event, index)" />
+        <business-name-input :index="index" />
       </td>
       <td>
         <dollar-format-input :value="business.liability" @input="changeLiability($event, index)" />
@@ -17,9 +17,10 @@
 <script>
 import { mapState, mapMutations } from "vuex";
 import DollarFormatInput from "@/components/misc/DollarFormatInput.vue";
+import BusinessNameInput from "@/components/misc/BusinessNameInput.vue";
 
 export default {
-  components: { DollarFormatInput },
+  components: { DollarFormatInput, BusinessNameInput },
   computed: {
     ...mapState("investments", ["businesses"])
   },
