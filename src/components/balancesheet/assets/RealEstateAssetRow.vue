@@ -1,6 +1,6 @@
 <template>
   <div class="line-input">
-    <input type="text" autocomplete="off" :value="property.name" @input="changeName" />
+    <property-name-input :index="index" />
     <dollar-format-input :value="property.downPayment" @input="changeDownPayment($event)" />
     <dollar-format-input :value="property.cost" @input="changeCost($event)" />
   </div>
@@ -9,9 +9,10 @@
 <script>
 import { mapState, mapGetters } from "vuex";
 import DollarFormatInput from "@/components/misc/DollarFormatInput.vue";
+import PropertyNameInput from "@/components/misc/PropertyNameInput.vue";
 
 export default {
-  components: { DollarFormatInput },
+  components: { DollarFormatInput, PropertyNameInput },
   props: {
     index: Number
   },

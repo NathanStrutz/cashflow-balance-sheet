@@ -5,7 +5,7 @@
         <label>RE Mortgage:</label>
       </td>
       <td :colspan="!index ? 1 : 2">
-        <input type="text" autocomplete="off" :value="property.name" @input="changeName($event, index)" />
+        <property-name-input :index="index" />
       </td>
       <td>
         <dollar-format-input :value="property.mortgage" @input="changeMortgage($event, index)" />
@@ -17,9 +17,10 @@
 <script>
 import { mapState, mapMutations } from "vuex";
 import DollarFormatInput from "@/components/misc/DollarFormatInput.vue";
+import PropertyNameInput from "@/components/misc/PropertyNameInput.vue";
 
 export default {
-  components: { DollarFormatInput },
+  components: { DollarFormatInput, PropertyNameInput },
   computed: {
     ...mapState("investments", ["realEstate"])
   },
