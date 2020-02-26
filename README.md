@@ -40,3 +40,9 @@ npm run serve
 ```
 
 It will open up on whatever port is the default, probably :8080.
+
+### TODO
+
+TODO: PropertyNameInput should use slots and turn into ThingNameInput that can work with Properties, etc., or maybe this can be my first mix-in
+TODO: on mobile, break the overall grid or flow it one column at a time, it's too wide for a phone.
+TODO: change the Assets grid to a <td> table - it renders better especially on mobile.
