@@ -3,7 +3,7 @@
     <tr v-for="(business, index) in businesses" :key="index" :class="index === 0 ? 'line-input' : 'blank-line-input'">
       <td>
         <label v-if="index === 0">Businesses:</label>
-        <input type="text" autocomplete="off" :value="business.name" @input="changeName($event, index)" />
+        <business-name-input :index="index" />
       </td>
       <td>
         <dollar-format-input :value="business.income" @input="changeIncome($event, index)" />
@@ -15,9 +15,10 @@
 <script>
 import { mapState, mapMutations } from "vuex";
 import DollarFormatInput from "@/components/misc/DollarFormatInput.vue";
+import BusinessNameInput from "@/components/misc/BusinessNameInput.vue";
 
 export default {
-  components: { DollarFormatInput },
+  components: { DollarFormatInput, BusinessNameInput },
   computed: {
     ...mapState("investments", ["businesses"])
   },

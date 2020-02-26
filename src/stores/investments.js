@@ -26,6 +26,14 @@ export default {
     changeStockName: (state, { index, value }) => (state.stocks[index].name = value),
     changeStockShares: (state, { index, value }) => (state.stocks[index].shares = value),
     changeStockCostPerShare: (state, { index, value }) => (state.stocks[index].costPerShare = value),
+    addStock: state => state.stocks.push(newStock()),
+    deleteStock: (state, index) => {
+      state.stocks = state.stocks.filter((_val, i) => i !== index);
+      if (state.stocks.length < 2) {
+        state.stocks.push(newStock());
+      }
+      state.modal.show = false;
+    },
     showStockModal(state, index) {
       state.modal = {
         show: true,
@@ -62,6 +70,14 @@ export default {
     changeBusinessCost: (state, { index, value }) => (state.businesses[index].cost = value),
     changeBusinessLiability: (state, { index, value }) => (state.businesses[index].liability = value),
     changeBusinessIncome: (state, { index, value }) => (state.businesses[index].income = value),
+    addBusiness: state => state.businesses.push(newBusiness()),
+    deleteBusiness: (state, index) => {
+      state.businesses = state.businesses.filter((_val, i) => i !== index);
+      if (state.businesses.length < 2) {
+        state.businesses.push(newBusiness());
+      }
+      state.modal.show = false;
+    },
     showBusinessModal(state, index) {
       state.modal = {
         show: true,
