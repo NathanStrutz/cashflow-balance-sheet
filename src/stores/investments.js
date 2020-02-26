@@ -5,7 +5,12 @@ const newBusiness = () => ({ name: "", downPayment: 0, cost: 0, liability: 0, in
 const initialState = () => ({
   realEstate: [newRealEstate(), newRealEstate(), newRealEstate(), newRealEstate()],
   businesses: [newBusiness(), newBusiness()],
-  stocks: [newStock(), newStock()]
+  stocks: [newStock(), newStock()],
+  modal: {
+    show: false,
+    type: null, // one of: realEstate, business, stock
+    index: -1 // index of the item being edited
+  }
 });
 
 export default {
@@ -21,6 +26,13 @@ export default {
     changeStockName: (state, { index, value }) => (state.stocks[index].name = value),
     changeStockShares: (state, { index, value }) => (state.stocks[index].shares = value),
     changeStockCostPerShare: (state, { index, value }) => (state.stocks[index].costPerShare = value),
+    showStockModal(state, index) {
+      state.modal = {
+        show: true,
+        type: "stock",
+        index: index
+      };
+    },
 
     // Real Estate
     changeRealEstateName: (state, { index, value }) => (state.realEstate[index].name = value),
@@ -28,12 +40,38 @@ export default {
     changeRealEstateCost: (state, { index, value }) => (state.realEstate[index].cost = value),
     changeRealEstateMortgage: (state, { index, value }) => (state.realEstate[index].mortgage = value),
     changeRealEstateIncome: (state, { index, value }) => (state.realEstate[index].income = value),
+    addRealEstate: state => state.realEstate.push(newRealEstate()),
+    deleteRealEstate: (state, index) => {
+      state.realEstate = state.realEstate.filter((_val, i) => i !== index);
+      if (state.realEstate.length < 4) {
+        state.realEstate.push(newRealEstate());
+      }
+      state.modal.show = false;
+    },
+    showRealEstateModal(state, index) {
+      state.modal = {
+        show: true,
+        type: "realEstate",
+        index: index
+      };
+    },
 
     // Businesses
     changeBusinessName: (state, { index, value }) => (state.businesses[index].name = value),
     changeBusinessDownPayment: (state, { index, value }) => (state.businesses[index].downPayment = value),
     changeBusinessCost: (state, { index, value }) => (state.businesses[index].cost = value),
     changeBusinessLiability: (state, { index, value }) => (state.businesses[index].liability = value),
-    changeBusinessIncome: (state, { index, value }) => (state.businesses[index].income = value)
+    changeBusinessIncome: (state, { index, value }) => (state.businesses[index].income = value),
+    showBusinessModal(state, index) {
+      state.modal = {
+        show: true,
+        type: "business",
+        index: index
+      };
+    },
+
+    closeModal(state) {
+      state.modal.show = false;
+    }
   }
 };

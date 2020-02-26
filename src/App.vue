@@ -4,6 +4,7 @@
     <statement-area />
     <monthly-cash-flow />
     <balance-sheet-area />
+    <modal-window-loader />
   </div>
 </template>
 
@@ -12,10 +13,11 @@ import CashflowHeader from "@/components/CashflowHeader.vue";
 import StatementArea from "@/components/statement/StatementArea.vue";
 import MonthlyCashFlow from "@/components/MonthlyCashFlow.vue";
 import BalanceSheetArea from "@/components/balancesheet/BalanceSheetArea.vue";
+import ModalWindowLoader from "@/components/application/ModalWindowLoader.vue";
 
 export default {
   name: "app",
-  components: { CashflowHeader, StatementArea, MonthlyCashFlow, BalanceSheetArea }
+  components: { CashflowHeader, StatementArea, MonthlyCashFlow, BalanceSheetArea, ModalWindowLoader }
 };
 </script>
 

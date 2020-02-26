@@ -20,10 +20,10 @@ export default new Vuex.Store({
       rootState.income.interest2.value +
       rootState.investments.realEstate.reduce((sum, it) => sum + it.income, 0) +
       rootState.investments.businesses.reduce((sum, it) => sum + it.income, 0),
-    totalIncome: (state, getters, rootState, rootGetters) => rootState.income.salary.value - 0 + getters.passiveIncome,
-    childExpenses: (state, getters, rootState, rootGetters) =>
+    totalIncome: (_state, getters, rootState) => rootState.income.salary.value - 0 + getters.passiveIncome,
+    childExpenses: (_state, _getters, rootState) =>
       rootState.expenses.children.numberOfChildren * rootState.expenses.children.perChildExpense,
-    totalExpenses: (state, getters, rootState, rootGetters) =>
+    totalExpenses: (_state, getters, rootState) =>
       rootState.expenses.taxes.value +
       rootState.expenses.mortgage.value +
       rootState.expenses.schoolLoan.value +
@@ -34,10 +34,10 @@ export default new Vuex.Store({
       rootState.expenses.bankLoan.value +
       getters.childExpenses +
       rootState.expenses.miscellaneousExpense.value,
-    cashFlow: (state, getters) => getters.totalIncome - getters.totalExpenses
+    cashFlow: (_state, getters) => getters.totalIncome - getters.totalExpenses
   },
   mutations: {
-    "RESET_STATE": () => {}
+    RESET_STATE: () => {}
   },
   modules: {
     income,
