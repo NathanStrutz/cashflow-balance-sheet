@@ -44,6 +44,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "@/palette.scss";
+
 .modal-fade-enter,
 .modal-fade-leave-active {
   opacity: 0;
@@ -67,7 +69,7 @@ export default {
 
   .modal {
     background: #ffffff;
-    box-shadow: 2px 2px 20px 1px;
+    box-shadow: 4px 4px 30px 1px;
     overflow-x: auto;
     display: flex;
     flex-direction: column;
@@ -80,9 +82,9 @@ export default {
     }
 
     .modal-header {
-      border-bottom: 1px solid #eeeeee;
-      background-color: #0033cc;
-      color: #fff;
+      border-bottom: 1px solid $colorW;
+      background-color: $colorG;
+      color: #000;
       vertical-align: baseline;
       justify-content: space-between;
       font-size: 1.5rem;
@@ -113,15 +115,20 @@ export default {
         border: 0;
 
         &.modal-delete {
-          background-color: #fdd;
+          background-color: $colorR;
+          color: #fff;
+          img {
+            filter: invert(1);
+          }
+
           &:hover {
-            background-color: darken(#fdd, 5);
+            background-color: darken($colorR, 10);
           }
         }
         &.modal-close {
-          background-color: #cec;
+          background-color: $colorG;
           &:hover {
-            background-color: darken(#cec, 5);
+            background-color: darken($colorG, 10);
           }
         }
       }
