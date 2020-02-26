@@ -46,6 +46,11 @@ input[type="text"]:active {
   border-bottom-color: #000;
   border-left-color: #888;
 }
+
+button {
+  cursor: pointer;
+}
+
 h3.column-title-bar {
   background-color: #000;
   color: #fff;

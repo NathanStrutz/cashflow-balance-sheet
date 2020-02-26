@@ -13,10 +13,12 @@
         </section>
         <footer class="modal-footer">
           <button type="button" class="modal-delete" @click="del" aria-label="Close modal">
+            <img src="@/images/close.svg" width="12" height="12" />
             Delete
           </button>
           <slot name="footer" />
           <button type="button" class="modal-close" @click="close" aria-label="Close modal">
+            <img src="@/images/check.svg" width="12" height="12" />
             Done
           </button>
         </footer>
@@ -41,7 +43,7 @@ export default {
 };
 </script>
 
-<style lang="scss" >
+<style lang="scss">
 .modal-fade-enter,
 .modal-fade-leave-active {
   opacity: 0;
@@ -103,21 +105,25 @@ export default {
     .modal-footer {
       border-top: 1px solid #eeeeee;
       justify-content: space-between;
+
       button {
+        font-size: 1rem;
         padding: 0.4rem 1.2rem;
         background-color: transparent;
-        border: 3px solid #000;
+        border: 0;
 
-        &:focus {
-          border-radius: 0.45rem;
+        &.modal-delete {
+          background-color: #fdd;
+          &:hover {
+            background-color: darken(#fdd, 5);
+          }
         }
-      }
-      button.modal-delete {
-        border-color: red;
-      }
-      button.modal-close {
-        border-color: blue;
-        background-color: #ddf;
+        &.modal-close {
+          background-color: #cec;
+          &:hover {
+            background-color: darken(#cec, 5);
+          }
+        }
       }
     }
 
@@ -125,17 +131,13 @@ export default {
       position: relative;
       padding: 15px 10px;
 
-      table {
-        tr {
-          td {
-            padding: 3px 6px;
-            font-family: sans-serif;
-            font-size: 0.9rem;
+      table tr td {
+        padding: 3px 6px;
+        font-family: sans-serif;
+        font-size: 0.9rem;
 
-            input {
-              width: 250px;
-            }
-          }
+        input {
+          width: 250px;
         }
       }
     }
