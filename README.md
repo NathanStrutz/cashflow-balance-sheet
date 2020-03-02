@@ -43,6 +43,21 @@ It will open up on whatever port is the default, probably :8080.
 
 ### TODO
 
-TODO: on mobile, break the overall grid or flow it one column at a time, it's too wide for a phone.
-TODO: change the Assets grid to a <td> table - it renders better especially on mobile.
-TODO: Turn the page over, use the outer-loop scoresheet.
+- TODO: on mobile, break the overall grid or flow it one column at a time, it's too wide for a phone.
+- TODO: change the Assets grid to a `<td>` table - it renders better, especially on mobile.
+- TODO: Turn the page over, use the outer-loop scoresheet. Use Vue-Router?
+
+### Publishing
+
+To publish a working build to the demo site:
+
+```sh
+# if there isn't a local gh-pages branch
+git checkout -b gh-pages
+# edit the `./vue.config.js` file, add `publicPath: "/cashflow-balance-sheet",` to the top level
+#
+# once the gh-pages branch is established
+git checkout gh-pages
+npm run build
+git subtree push --prefix dist origin gh-pages
+```
