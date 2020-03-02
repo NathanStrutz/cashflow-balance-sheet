@@ -1,7 +1,7 @@
 <template>
   <div id="income-summary">
     <div id="auditor-area">
-      <title-input :value="auditor" @input="changeAuditor($event)">Auditor</title-input>
+      <title-input :value="auditor" @input="changeAuditor($event)" :tabindex="3">Auditor</title-input>
       <sub>Person on your right</sub>
     </div>
     <div id="passive-income-area">

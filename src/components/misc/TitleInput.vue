@@ -3,14 +3,15 @@
     <label>
       <slot />
     </label>
-    <input type="text" autocomplete="off" :value="value" @input="$emit('input', $event.target.value)" />
+    <input type="text" autocomplete="off" :value="value" @input="$emit('input', $event.target.value)" :tabindex="tabindex" />
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    value: String
+    value: String,
+    tabindex: { type: Number, default: 0 }
   }
 };
 </script>

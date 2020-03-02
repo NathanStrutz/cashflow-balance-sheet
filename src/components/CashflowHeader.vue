@@ -1,8 +1,8 @@
 <template>
   <div>
     <header>
-      <title-input :value="profession" @input="changeProfession($event)">Profession</title-input>
-      <title-input :value="player" @input="changePlayer($event)">Player</title-input>
+      <title-input :value="profession" @input="changeProfession($event)" :tabindex="1">Profession</title-input>
+      <title-input :value="player" @input="changePlayer($event)" :tabindex="2">Player</title-input>
       <header-menu />
     </header>
     <p>
