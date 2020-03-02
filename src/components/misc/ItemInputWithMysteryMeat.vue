@@ -3,6 +3,7 @@
 <template>
   <span class="hover-inline-buttons">
     <slot name="input" />
+    <slot name="right-3" />
     <slot name="right-2" />
     <slot name="right-1" />
   </span>
@@ -33,21 +34,24 @@ input:hover .add-row-button {
     position: absolute;
     cursor: pointer;
 
-    &.right-1 {
+    &.right-1,
+    &.right-2,
+    &.right-3 {
       position: absolute;
+
+      img {
+        background-color: #fff;
+      }
+    }
+
+    &.right-1 {
       right: 0;
     }
     &.right-2 {
-      position: absolute;
       right: 24px;
     }
-    &.left-1 {
-      position: absolute;
-      left: 3px;
-    }
-    &.left-2 {
-      position: absolute;
-      left: 24px;
+    &.right-3 {
+      right: 48px;
     }
   }
 

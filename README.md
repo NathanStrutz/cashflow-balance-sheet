@@ -21,7 +21,7 @@ Well then I made this just for you. I mean, really I made it for me, but we can 
 
 ## Development
 
-What good, modern web application would be complete without an opinionated, virtual DOM powered, dynamic javascript-ecosystem-centric framework at the helm? Well not this one! Rest assured there's a framework here, and it's a great one. Vue.js is fun to use, and I definitely used it.
+What good, modern web application would be complete without an opinionated, virtual DOM powered, dynamic javascript-ecosystem-centric framework at the helm? Well not this one! Vue.js is fun to use, and I definitely used it.
 
 If you don't want this game sheet as a javascript application, check out the `html` branch, it's just plain HTML & CSS.
 
@@ -43,6 +43,6 @@ It will open up on whatever port is the default, probably :8080.
 
 ### TODO
 
-TODO: PropertyNameInput should use slots and turn into ThingNameInput that can work with Properties, etc., or maybe this can be my first mix-in
 TODO: on mobile, break the overall grid or flow it one column at a time, it's too wide for a phone.
 TODO: change the Assets grid to a <td> table - it renders better especially on mobile.
+TODO: Turn the page over, use the outer-loop scoresheet.
