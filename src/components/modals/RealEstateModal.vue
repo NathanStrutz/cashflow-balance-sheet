@@ -11,12 +11,12 @@
           <tr>
             <td><label>Down Payment:</label></td>
             <td>
-              <dollar-format-input name="downPayment" :value="item.downPayment" @input="changeDownPayment" />
+              <dollar-format-input name="downPayment" :value="item.downPayment" @input="changeDownPayment" @blur="estimateMortgage" />
             </td>
           </tr>
           <tr>
             <td><label>Cost:</label></td>
-            <td><dollar-format-input name="cost" :value="item.cost" @input="changeCost" /></td>
+            <td><dollar-format-input name="cost" :value="item.cost" @input="changeCost" @blur="estimateMortgage" /></td>
           </tr>
           <tr>
             <td><label>Mortgage:</label></td>
@@ -41,6 +41,11 @@ export default {
   components: { ModalWindow, DollarFormatInput },
   props: {
     index: { type: Number, default: -1 }
+  },
+  data() {
+    return {
+      hasEditedMortgage: false
+    };
   },
   computed: {
     ...mapGetters("investments", ["getRealEstate"]),
@@ -67,11 +72,22 @@ export default {
     changeCost(value) {
       this.changeRealEstateCost({ index: this.index, value });
     },
+    estimateMortgage() {
+      if (!this.hasEditedMortgage) {
+        this.changeRealEstateMortgage({ index: this.index, value: this.item.cost - this.item.downPayment });
+      }
+    },
     changeMortgage(value) {
+      this.hasEditedMortgage = true;
       this.changeRealEstateMortgage({ index: this.index, value });
     },
     changeIncome(value) {
       this.changeRealEstateIncome({ index: this.index, value });
+    }
+  },
+  mounted() {
+    if (this.item.mortgage) {
+      this.hasEditedMortgage = true;
     }
   }
 };

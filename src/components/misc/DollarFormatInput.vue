@@ -47,7 +47,8 @@ export default {
         this.$nextTick(() => el.select());
       }
     },
-    blur() {
+    blur(e) {
+      this.$emit("blur", e);
       this.isFocused = false;
     },
     setNewValue(val) {
