@@ -3,6 +3,7 @@
 <template>
   <span class="hover-inline-buttons">
     <slot name="input" />
+    <slot name="left-1" />
     <slot name="right-3" />
     <slot name="right-2" />
     <slot name="right-1" />
@@ -14,14 +15,23 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-input .add-row-button {
-  filter: alpha(opacity=0);
-  transition: all 0.2s ease-in-out;
-  cursor: ne-resize;
+input {
+  .left-1,
+  .right-3,
+  .right-2,
+  .right-1 {
+    filter: alpha(opacity=0);
+    transition: all 0.2s ease-in-out;
+  }
 }
-input:hover .add-row-button {
-  filter: alpha(opacity=1);
-  transition: all 0.2s ease-in-out;
+input:hover {
+  .left-1,
+  .right-3,
+  .right-2,
+  .right-1 {
+    filter: alpha(opacity=1);
+    transition: all 0.2s ease-in-out;
+  }
 }
 .hover-inline-buttons {
   position: relative;
@@ -44,6 +54,9 @@ input:hover .add-row-button {
       }
     }
 
+    &.left-1 {
+      left: 3px;
+    }
     &.right-1 {
       right: 0;
     }

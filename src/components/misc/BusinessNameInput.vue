@@ -7,7 +7,7 @@
       <a :class="propertyClasses" title="Edit this business" @click="openModal"><img src="@/images/store_mall_directory.svg"/></a>
     </template>
     <template #right-1>
-      <a v-if="showAddButton" class="add-row-button right-1" title="Add a row" @click="addBusiness"><img src="@/images/add.svg"/></a>
+      <a v-if="showAddButton" class="right-1" title="Add a row" @click="addBusiness"><img src="@/images/add.svg"/></a>
     </template>
   </item-input-with-mystery-meat>
 </template>
@@ -32,7 +32,6 @@ export default {
     },
     propertyClasses() {
       return {
-        "add-row-button": true,
         "right-1": !this.showAddButton,
         "right-2": this.showAddButton
       };
