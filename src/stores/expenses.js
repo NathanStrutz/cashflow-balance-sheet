@@ -6,7 +6,7 @@ const initialState = () => ({
   creditCard: { note: "", value: 0 },
   retail: { note: "", value: 0 },
   other: { note: "", value: 0 },
-  bankLoan: { note: "", value: 0 },
+  bankLoan: { note: "" },
   miscellaneousExpense: { note: "", value: 0 },
   children: { note: "", numberOfChildren: 0, perChildExpense: 0 }
 });
@@ -14,6 +14,9 @@ const initialState = () => ({
 export default {
   namespaced: true,
   state: initialState(),
+  getters: {
+    bankLoanAmount: (_state, _getters, rootState) => Math.round(rootState.liabilities.bankLoan / 10)
+  },
   mutations: {
     changeTaxes: (state, payload) => (state.taxes = { ...state.taxes, ...payload }),
     changeMortgage: (state, payload) => (state.mortgage = { ...state.mortgage, ...payload }),
@@ -22,7 +25,7 @@ export default {
     changeCreditCard: (state, payload) => (state.creditCard = { ...state.creditCard, ...payload }),
     changeRetail: (state, payload) => (state.retail = { ...state.retail, ...payload }),
     changeOther: (state, payload) => (state.other = { ...state.other, ...payload }),
-    changeBankLoan: (state, payload) => (state.bankLoan = { ...state.bankLoan, ...payload }),
+    changeBankLoanNote: (state, payload) => (state.bankLoan.note = payload),
     changeMiscellaneousExpense: (state, payload) => (state.miscellaneousExpense = { ...state.miscellaneousExpense, ...payload }),
     changeChildNote: (state, payload) => (state.children.note = payload),
     changeNumberOfChildren: (state, payload) => (state.children.numberOfChildren = payload),

@@ -11,7 +11,7 @@
         <state-connected-input title="Retail Payment" category="expenses" item="retail" change="changeRetail" />
         <state-connected-input title="Other Expenses" category="expenses" item="other" change="changeOther" />
         <line-input title="Child Expenses" :text="children.note" @updateText="changeChildNote" :value="childExpenses" readonly />
-        <state-connected-input title="Bank Loan Payment" category="expenses" item="bankLoan" change="changeBankLoan" />
+        <line-input title="Bank Loan Payment" :text="bankLoan.note" @updateText="changeBankLoanNote" :value="bankLoanAmount" readonly />
         <state-connected-input category="expenses" item="miscellaneousExpense" change="changeMiscellaneousExpense" />
       </tbody>
     </table>
@@ -29,11 +29,12 @@ export default {
     LineInput
   },
   computed: {
-    ...mapState("expenses", ["children"]),
+    ...mapState("expenses", ["children", "bankLoan"]),
+    ...mapGetters("expenses", ["bankLoanAmount"]),
     ...mapGetters(["childExpenses"])
   },
   methods: {
-    ...mapMutations("expenses", ["changeChildNote"])
+    ...mapMutations("expenses", ["changeChildNote", "changeBankLoanNote"])
   }
 };
 </script>
