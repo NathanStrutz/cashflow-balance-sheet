@@ -25,7 +25,11 @@ export default {
   },
   computed: {
     displayFormattedValue() {
-      return `$ ${new Intl.NumberFormat("en-US").format(this.value)}`;
+      if (this.value) {
+        return `$ ${new Intl.NumberFormat("en-US").format(this.value)}`;
+      } else {
+        return "";
+      }
     },
     displayValue() {
       return this.isFocused ? this.value.toString() : this.displayFormattedValue;
