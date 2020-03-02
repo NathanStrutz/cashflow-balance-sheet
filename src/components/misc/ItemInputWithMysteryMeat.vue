@@ -4,6 +4,7 @@
   <span class="hover-inline-buttons">
     <slot name="input" />
     <slot name="left-1" />
+    <slot name="left-2" />
     <slot name="right-3" />
     <slot name="right-2" />
     <slot name="right-1" />
@@ -17,6 +18,7 @@ export default {};
 <style lang="scss" scoped>
 input {
   .left-1,
+  .left-2,
   .right-3,
   .right-2,
   .right-1 {
@@ -26,6 +28,7 @@ input {
 }
 input:hover {
   .left-1,
+  .left-2,
   .right-3,
   .right-2,
   .right-1 {
@@ -44,6 +47,8 @@ input:hover {
     position: absolute;
     cursor: pointer;
 
+    &.left-1,
+    &.left-2,
     &.right-1,
     &.right-2,
     &.right-3 {
@@ -57,14 +62,17 @@ input:hover {
     &.left-1 {
       left: 3px;
     }
-    &.right-1 {
-      right: 0;
+    &.left-2 {
+      left: 27px;
+    }
+    &.right-3 {
+      right: 48px;
     }
     &.right-2 {
       right: 24px;
     }
-    &.right-3 {
-      right: 48px;
+    &.right-1 {
+      right: 0;
     }
   }
 
