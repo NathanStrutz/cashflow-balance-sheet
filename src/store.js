@@ -15,7 +15,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   getters: {
-    passiveIncome: (state, getters, rootState, rootGetters) =>
+    passiveIncome: (_state, _getters, rootState) =>
       rootState.income.interest.value +
       rootState.income.interest2.value +
       rootState.investments.realEstate.reduce((sum, it) => sum + it.income, 0) +
@@ -23,7 +23,7 @@ export default new Vuex.Store({
     totalIncome: (_state, getters, rootState) => rootState.income.salary.value - 0 + getters.passiveIncome,
     childExpenses: (_state, _getters, rootState) =>
       rootState.expenses.children.numberOfChildren * rootState.expenses.children.perChildExpense,
-    totalExpenses: (_state, getters, rootState) =>
+    totalExpenses: (_state, getters, rootState, rootGetters) =>
       rootState.expenses.taxes.value +
       rootState.expenses.mortgage.value +
       rootState.expenses.schoolLoan.value +
@@ -31,7 +31,7 @@ export default new Vuex.Store({
       rootState.expenses.creditCard.value +
       rootState.expenses.retail.value +
       rootState.expenses.other.value +
-      rootState.expenses.bankLoan.value +
+      rootGetters["expenses/bankLoanAmount"] +
       getters.childExpenses +
       rootState.expenses.miscellaneousExpense.value,
     cashFlow: (_state, getters) => getters.totalIncome - getters.totalExpenses
