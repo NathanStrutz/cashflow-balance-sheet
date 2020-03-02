@@ -1,6 +1,6 @@
 <template>
   <transition name="modal-fade">
-    <div class="modal-backdrop" tabindex="0" @keyup.esc="close" @keyup.ctrl.c="close" @click="close">
+    <div ref="win" class="modal-backdrop" tabindex="0" @keyup.esc="close" @keyup.ctrl.c="close" @click="close">
       <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription" @click="dontClose">
         <header class="modal-header" id="modalTitle">
           <slot name="header" />
@@ -39,6 +39,9 @@ export default {
     del() {
       this.$emit("del");
     }
+  },
+  mounted() {
+    this.$refs.win.focus();
   }
 };
 </script>
