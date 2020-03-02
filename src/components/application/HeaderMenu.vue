@@ -1,7 +1,7 @@
 <template>
   <div id="header-menu" class="no-print">
     <span class="menuHoverOpen">
-      <a href="javascript:" @click.prevent><img src="@/images/more_vert.svg"/></a>
+      <a href="javascript:" tabindex="-1" @click.prevent><img src="@/images/more_vert.svg"/></a>
       <div class="menu">
         <ul>
           <li @click="github"><img src="@/images/github.svg" width="24" height="24" /> <span>GitHub Project</span></li>
