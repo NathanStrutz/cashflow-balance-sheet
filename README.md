@@ -58,6 +58,11 @@ git checkout -b gh-pages
 #
 # once the gh-pages branch is established
 git checkout gh-pages
+git merge vue
 npm run build
+git add .
+git commit -m "Building"
 git subtree push --prefix dist origin gh-pages
+git checkout vue
+start "https://nathanstrutz.github.io/cashflow-balance-sheet/"
 ```
