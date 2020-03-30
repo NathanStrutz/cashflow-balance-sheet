@@ -96,7 +96,7 @@ table {
   }
 }
 
-input.numeric {
+.numeric {
   text-align: right;
 }
 
