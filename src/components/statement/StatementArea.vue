@@ -57,6 +57,8 @@ export default {
   border-bottom: 4px solid #000;
   display: flex;
   flex-direction: column;
+  min-height: 20rem;
+
   .total-io {
     padding: 0 0 30px 40%;
   }
