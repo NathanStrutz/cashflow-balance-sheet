@@ -33,4 +33,13 @@ export default {
   grid-template-areas: "assets liabilities";
   border: 2px solid #000;
 }
+
+@media (max-width: 800px) {
+  #balance-sheet-area {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "assets"
+      "liabilities";
+  }
+}
 </style>
