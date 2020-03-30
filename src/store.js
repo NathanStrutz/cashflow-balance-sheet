@@ -13,7 +13,11 @@ import investments from "./stores/investments";
 
 Vue.use(Vuex);
 
+const initialState = () => ({
+  displaySheet: "Rat Race"
+});
 export default new Vuex.Store({
+  state: initialState(),
   getters: {
     passiveIncome: (_state, _getters, rootState) =>
       rootState.income.interest.value +

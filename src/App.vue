@@ -1,23 +1,21 @@
 <template>
-  <div>
-    <cashflow-header />
-    <statement-area />
-    <monthly-cash-flow />
-    <balance-sheet-area />
-    <modal-window-loader />
-  </div>
+  <component :is="sheet" />
 </template>
 
 <script>
-import CashflowHeader from "@/components/CashflowHeader.vue";
-import StatementArea from "@/components/statement/StatementArea.vue";
-import MonthlyCashFlow from "@/components/MonthlyCashFlow.vue";
-import BalanceSheetArea from "@/components/balancesheet/BalanceSheetArea.vue";
-import ModalWindowLoader from "@/components/application/ModalWindowLoader.vue";
+import RatRace from "@/components/RatRace.vue";
+import { mapState } from "vuex";
 
 export default {
   name: "app",
-  components: { CashflowHeader, StatementArea, MonthlyCashFlow, BalanceSheetArea, ModalWindowLoader }
+  components: { RatRace },
+  computed: {
+    ...mapState(["displaySheet"]),
+    sheet() {
+      console.log("this.displaySheet", this.displaySheet, "equalsratrace", this.displaySheet === "Rat Race");
+      return this.displaySheet === "Rat Race" ? RatRace : null;
+    }
+  }
 };
 </script>
 
