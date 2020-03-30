@@ -45,7 +45,9 @@ export default {
 #statement-area {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "income income-summary" "expenses expense-summary";
+  grid-template-areas:
+    "income income-summary"
+    "expenses expense-summary";
   grid-column-gap: 1%;
 }
 
@@ -57,6 +59,17 @@ export default {
   flex-direction: column;
   .total-io {
     padding: 0 0 30px 40%;
+  }
+}
+
+@media (max-width: 800px) {
+  #statement-area {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "income"
+      "income-summary"
+      "expenses"
+      "expense-summary";
   }
 }
 </style>
