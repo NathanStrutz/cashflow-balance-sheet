@@ -4,9 +4,9 @@
 
 <script>
 import { mapMutations, mapState } from "vuex";
-import BusinessModal from "@/components/modals/BusinessModal.vue";
-import RealEstateModal from "@/components/modals/RealEstateModal.vue";
-import StockModal from "@/components/modals/StockModal.vue";
+import BusinessModal from "@/components/ratrace/modals/BusinessModal.vue";
+import RealEstateModal from "@/components/ratrace/modals/RealEstateModal.vue";
+import StockModal from "@/components/ratrace/modals/StockModal.vue";
 
 export default {
   components: { BusinessModal, RealEstateModal, StockModal },

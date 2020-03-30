@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import TitleInput from "./misc/TitleInput.vue";
-import HeaderMenu from "./application/HeaderMenu.vue";
+import TitleInput from "@/components/misc/TitleInput.vue";
+import HeaderMenu from "@/components/application/HeaderMenu.vue";
 import { mapState, mapMutations } from "vuex";
 
 export default {

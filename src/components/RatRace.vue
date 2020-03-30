@@ -9,10 +9,10 @@
 </template>
 
 <script>
-import CashflowHeader from "@/components/CashflowHeader.vue";
-import StatementArea from "@/components/statement/StatementArea.vue";
-import MonthlyCashFlow from "@/components/MonthlyCashFlow.vue";
-import BalanceSheetArea from "@/components/balancesheet/BalanceSheetArea.vue";
+import CashflowHeader from "@/components/ratrace/CashflowHeader.vue";
+import StatementArea from "@/components/ratrace/statement/StatementArea.vue";
+import MonthlyCashFlow from "@/components/ratrace/MonthlyCashFlow.vue";
+import BalanceSheetArea from "@/components/ratrace/balancesheet/BalanceSheetArea.vue";
 import ModalWindowLoader from "@/components/application/ModalWindowLoader.vue";
 
 export default {
