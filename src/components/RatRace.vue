@@ -16,7 +16,6 @@ import BalanceSheetArea from "@/components/ratrace/balancesheet/BalanceSheetArea
 import ModalWindowLoader from "@/components/application/ModalWindowLoader.vue";
 
 export default {
-  name: "app",
   components: { CashflowHeader, StatementArea, MonthlyCashFlow, BalanceSheetArea, ModalWindowLoader }
 };
 </script>

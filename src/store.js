@@ -10,6 +10,7 @@ import liabilities from "./stores/liabilities";
 import meta from "./stores/meta";
 import assets from "./stores/assets";
 import investments from "./stores/investments";
+import fasttrack from "./stores/fasttrack";
 
 Vue.use(Vuex);
 
@@ -41,6 +42,8 @@ export default new Vuex.Store({
     cashFlow: (_state, getters) => getters.totalIncome - getters.totalExpenses
   },
   mutations: {
+    toRatRace: state => (state.displaySheet = "Rat Race"),
+    toFastTrack: state => (state.displaySheet = "Fast Track"),
     RESET_STATE: () => {}
   },
   modules: {
@@ -49,7 +52,8 @@ export default new Vuex.Store({
     liabilities,
     meta,
     assets,
-    investments
+    investments,
+    fasttrack
   },
   plugins: [resetStatePlugin, localStoragePlugin]
 });

@@ -4,6 +4,7 @@
 
 <script>
 import RatRace from "@/components/RatRace.vue";
+import FastTrack from "@/components/FastTrack.vue";
 import { mapState } from "vuex";
 
 export default {
@@ -12,8 +13,7 @@ export default {
   computed: {
     ...mapState(["displaySheet"]),
     sheet() {
-      console.log("this.displaySheet", this.displaySheet, "equalsratrace", this.displaySheet === "Rat Race");
-      return this.displaySheet === "Rat Race" ? RatRace : null;
+      return this.displaySheet === "Rat Race" ? RatRace : FastTrack;
     }
   }
 };

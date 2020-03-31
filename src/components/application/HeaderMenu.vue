@@ -4,12 +4,12 @@
       v-if="this.displaySheet === 'Rat Race'"
       href="javascript:"
       tabindex="-1"
-      @click.prevent="toCashFlowDay"
-      title="Turn the page to Cash Flow Day"
+      @click.prevent="toFastTrack"
+      title="Turn the page to the Fast Track"
       ><img src="@/images/swap_calls.svg"
     /></a>
     <a
-      v-if="this.displaySheet === 'Cash Flow Day'"
+      v-if="this.displaySheet === 'Fast Track'"
       href="javascript:"
       tabindex="-1"
       @click.prevent="toRatRace"
@@ -46,7 +46,7 @@ export default {
     ...mapState(["displaySheet"])
   },
   methods: {
-    ...mapMutations(["RESET_STATE", "toRatRace", "toCashFlowDay"]),
+    ...mapMutations(["RESET_STATE", "toRatRace", "toFastTrack"]),
     github() {
       window.location.href = "https://github.com/NathanStrutz/cashflow-balance-sheet";
     },
