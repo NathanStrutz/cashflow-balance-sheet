@@ -44,7 +44,6 @@ It will open up on whatever port is the default, probably :8080.
 ### TODO
 
 - TODO: change the Assets grid to a `<td>` table - it renders better, especially on mobile - check again though, since I re-flowed the mobile layout.
-- TODO: Turn the page over, use the outer-loop scoresheet.
 
 ### Publishing
 
