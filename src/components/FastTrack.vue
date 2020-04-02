@@ -1,14 +1,16 @@
 <template>
   <div id="fast-track">
     <header-menu />
+    <fast-track-page />
   </div>
 </template>
 
 <script>
 import HeaderMenu from "@/components/application/HeaderMenu.vue";
+import FastTrackPage from "@/components/fasttrack/FastTrackPage.vue";
 
 export default {
-  components: { HeaderMenu }
+  components: { HeaderMenu, FastTrackPage }
 };
 </script>
 
@@ -16,9 +18,5 @@ export default {
 #fast-track {
   display: flex;
   justify-content: space-between;
-  //   position: absolute;
-  //   top: 0;
-  //   right: 0;
-  //   width: 200px;
 }
 </style>

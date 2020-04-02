@@ -1,5 +1,7 @@
 <template>
   <div>
+    <header-menu />
+
     <rat-race-header />
     <statement-area />
     <monthly-cash-flow />
@@ -14,9 +16,10 @@ import StatementArea from "@/components/ratrace/statement/StatementArea.vue";
 import MonthlyCashFlow from "@/components/ratrace/MonthlyCashFlow.vue";
 import BalanceSheetArea from "@/components/ratrace/balancesheet/BalanceSheetArea.vue";
 import ModalWindowLoader from "@/components/application/ModalWindowLoader.vue";
+import HeaderMenu from "@/components/application/HeaderMenu.vue";
 
 export default {
-  components: { RatRaceHeader, StatementArea, MonthlyCashFlow, BalanceSheetArea, ModalWindowLoader }
+  components: { RatRaceHeader, StatementArea, MonthlyCashFlow, BalanceSheetArea, ModalWindowLoader, HeaderMenu }
 };
 </script>
 

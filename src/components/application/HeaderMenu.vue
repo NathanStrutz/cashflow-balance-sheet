@@ -74,12 +74,20 @@ $hover-bg-color: #eee;
 #header-menu-area {
   display: flex;
   flex: 0 0 32px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px;
+  background-color: #fff;
 
   > a {
     position: relative;
     padding: 6px;
     margin-right: 4px;
     border: 1px solid $border-color;
+  }
+  > * {
+    background-color: #fff;
   }
 }
 
