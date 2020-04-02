@@ -39,24 +39,44 @@ export default {
 </script>
 
 <style>
-section#fasttrack-upper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas:
-    "fast-track-congratulations your-buyout"
-    "how-to-win explanation-of-100x";
+@media (min-width: 801px) {
+  section#fasttrack-upper {
+    display: grid;
+    grid-template-columns: 50fr 5fr 50fr;
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+
+  #fast-track-congratulations {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  #your-buyout {
+    grid-area: 1 / 2 / 2 / 4;
+  }
+  #how-to-win {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+  #explanation-of-100x {
+    grid-area: 2 / 3 / 3 / 4;
+  }
 }
 
 @media (max-width: 800px) {
   section#fasttrack-upper {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-      "fast-track-congratulations"
-      "your-buyout"
-      "how-to-win"
-      "explanation-of-100x";
+    display: block;
+  }
+  #fast-track-congratulations {
+    margin: 20px 0;
+  }
+  #your-buyout {
+    margin: 20px 0;
+  }
+  #how-to-win {
+    margin: 20px 0;
+  }
+  #explanation-of-100x {
+    margin: 20px 0;
   }
 }
 </style>

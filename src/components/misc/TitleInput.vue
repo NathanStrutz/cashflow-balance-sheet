@@ -21,7 +21,6 @@ export default {
   font-family: Georgia, Times, serif;
   display: flex;
   justify-content: stretch;
-  flex: 1 1 50%;
   flex-wrap: nowrap;
 
   label {

@@ -8,6 +8,9 @@ const initialState = () => ({
 export default {
   namespaced: true,
   state: initialState(),
+  getters: {
+    beginningCashFlowDayIncome: (_state, _getters, _rootState, rootGetters) => Math.round(rootGetters.passiveIncome / 1000) * 1000 * 100
+  },
   mutations: {
     setBeginningCashFlowDayIncome: (state, payload) => (state.beginningCashFlowDayIncome = payload),
     setInvestment: (state, { index, name, cashFlow }) => (state.investments[index] = { name, cashFlow })

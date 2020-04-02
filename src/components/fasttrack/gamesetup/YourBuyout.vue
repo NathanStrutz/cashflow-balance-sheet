@@ -11,7 +11,7 @@
         <tr>
           <td>Your Passive Income (from other side) <sub>(Rounded to Nearest Thousand Dollars)</sub></td>
           <td>=</td>
-          <td><dollar-format-input :value="roundedPassiveIncome" readonly /></td>
+          <td><dollar-format-input :value="beginningCashFlowDayIncome / 100" readonly /></td>
         </tr>
         <tr>
           <td>Buyout Multiple</td>
@@ -20,7 +20,7 @@
         <tr>
           <td>Your Beginning CASHFLOW Day Income</sub></td>
           <td>=</td>
-          <td><dollar-format-input :value="roundedPassiveIncome * 100" readonly /></td>
+          <td><dollar-format-input :value="beginningCashFlowDayIncome" readonly /></td>
         </tr>
       </table>
     </section>
@@ -36,10 +36,7 @@ export default {
   components: { TitleInput, DollarFormatInput },
   computed: {
     ...mapState("meta", ["player", "auditor"]),
-    ...mapGetters(["passiveIncome"]),
-    roundedPassiveIncome() {
-      return Math.round(this.passiveIncome / 1000) * 1000;
-    }
+    ...mapGetters("fasttrack", ["beginningCashFlowDayIncome"])
   },
   methods: {
     ...mapMutations("meta", ["changePlayer", "changeAuditor"])
@@ -52,8 +49,17 @@ export default {
   display: flex;
   flex-direction: column;
   align-content: space-between;
-}
 
+  /* I can't figure out how to flex the items without improperly stretching the Player title */
+  /* So pleas forgive this travesty */
+  > :nth-child(1),
+  > :nth-child(2) {
+    margin-bottom: 70px;
+  }
+}
+</style>
+
+<style lang="scss">
 .title-box {
   border: 1px solid black;
 
@@ -81,6 +87,4 @@ export default {
     display: block;
   }
 }
-</style>
-<style>
 </style>
