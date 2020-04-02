@@ -13,6 +13,9 @@ export default {
   },
   mutations: {
     setBeginningCashFlowDayIncome: (state, payload) => (state.beginningCashFlowDayIncome = payload),
-    setInvestment: (state, { index, name, cashFlow }) => (state.investments[index] = { name, cashFlow })
+    setInvestmentName: (state, { index, name }) => (state.investments[index].name = name),
+    setInvestmentCashflow: (state, { index, cashflow }) => (state.investments[index].cashflow = cashflow),
+    addInvestment: state => state.investments.push(newInvestment()),
+    removeInvestment: (state, index) => state.investments.splice(index, 1)
   }
 };
