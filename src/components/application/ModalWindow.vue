@@ -151,4 +151,18 @@ export default {
     }
   }
 }
+
+@media (max-width: 800px) {
+  .modal-backdrop {
+    justify-content: unset;
+
+    .modal {
+      box-shadow: 0 0 0 0;
+
+      .modal-body {
+        padding: 15px 0;
+      }
+    }
+  }
+}
 </style>

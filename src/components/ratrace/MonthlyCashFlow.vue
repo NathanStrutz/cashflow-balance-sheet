@@ -1,12 +1,10 @@
 <template>
   <div id="monthly-cash-flow-area">
-    <div class="total-io">
-      <label for="monthly-cash-flow">
-        Monthly Cash Flow:
-        <sub>(Pay Check)</sub>
-      </label>
-      <dollar-format-input id="monthly-cash-flow" :value="cashFlow" readonly />
-    </div>
+    <label for="monthly-cash-flow">
+      Monthly Cash Flow:
+      <sub>(Pay Check)</sub>
+    </label>
+    <dollar-format-input id="monthly-cash-flow" :value="cashFlow" readonly />
   </div>
 </template>
 
@@ -28,15 +26,22 @@ export default {
 }
 
 #monthly-cash-flow-area {
+  font-weight: 800;
   display: flex;
-  flex-direction: column;
-  margin: 15px 0 15px 50%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-end;
 
-  .total-io {
-    padding-left: 40%;
-    input {
-      flex: 1 0 110px;
-    }
+  input {
+    flex: 1 0 110px;
+  }
+
+  label {
+    flex: 0 0 110px;
+  }
+  sub {
+    display: block;
+    color: #666;
   }
 }
 </style>

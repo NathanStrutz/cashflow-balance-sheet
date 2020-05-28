@@ -1,11 +1,8 @@
 <template>
-  <div>
-    <h2 id="balance-sheet-title">Balance Sheet</h2>
-    <section id="balance-sheet-area">
-      <balance-sheet-assets />
-      <balance-sheet-liabilities />
-    </section>
-  </div>
+  <section id="balance-sheet-area">
+    <balance-sheet-assets />
+    <balance-sheet-liabilities />
+  </section>
 </template>
 
 <script>
@@ -21,10 +18,6 @@ export default {
 </script>
 
 <style lang="scss">
-#balance-sheet-title {
-  position: absolute;
-  margin-top: -45px;
-}
 /* 2nd grid for the bottom */
 #balance-sheet-area {
   display: grid;

@@ -58,10 +58,6 @@ export default {
   display: flex;
   flex-direction: column;
   min-height: 20rem;
-
-  .total-io {
-    padding: 0 0 30px 40%;
-  }
 }
 
 @media (max-width: 800px) {
